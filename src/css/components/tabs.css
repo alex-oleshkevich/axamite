@@ -1,0 +1,128 @@
+:root {
+    --ax-tabs-padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+    --ax-tabs-line-height: calc(var(--spacing) * 6);
+    --ax-tabs-border-color: var(--border-color-border);
+    --ax-tabs-radius: calc(var(--spacing) * 2);
+    --ax-tabs-active-bg: var(--background-color-surface2);
+    --ax-tabs-gap: calc(var(--spacing) * 2);
+
+    --ax-tabs-active-color: var(--border-color-selected);
+
+    --ax-tabs-underline-gap: 0;
+    --ax-tabs-underline-radius: var(--ax-tabs-radius);
+    --ax-tabs-underline-underline-height: 3px;
+    --ax-tabs-underline-text: var(--text-color-text);
+    --ax-tabs-underline-padding: var(--ax-tabs-padding);
+    --ax-tabs-underline-border-color: var(--ax-tabs-border-color);
+    --ax-tabs-underline-bg: var(--background-color-transparent);
+    --ax-tabs-underline-bg-hover: var(--background-color-transparent);
+    --ax-tabs-underline-selected-bg: var(--background-color-accent);
+
+    --ax-tabs-filled-tab-bg: white;
+
+    --ax-tabs-pills-tab-bg: var(--background-color-surface2);
+    --ax-tabs-pills-radius: var(--ax-tabs-radius);
+    --ax-tabs-pills-text: var(--text-color-text);
+    --ax-tabs-pills-padding: var(--ax-tabs-padding);
+    --ax-tabs-pills-selected-bg: var(--background-color-popover);
+    --ax-tabs-pills-shadow: var(--shadow-sm);
+
+
+    --ax-tabs-filled-tab-bg: var(--background-color-surface2);
+    --ax-tabs-filled-radius: var(--ax-tabs-radius);
+    --ax-tabs-filled-text: var(--text-color-text);
+    --ax-tabs-filled-padding: var(--ax-tabs-padding);
+    --ax-tabs-filled-selected-bg: var(--background-color-surface2);
+    --ax-tabs-filled-shadow: var(--shadow-sm);
+
+    --ax-tabs-outline-border-width: 1px;
+    --ax-tabs-outline-border-color: var(--border-color-border);
+    --ax-tabs-outline-radius: var(--ax-tabs-radius);
+    --ax-tabs-outline-text: var(--text-color-text);
+    --ax-tabs-outline-padding: var(--ax-tabs-padding);
+    --ax-tabs-outline-selected-bg: var(--background-color-surface2);
+}
+
+.tabs {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    line-height: var(--ax-tabs-line-height);
+}
+
+/* underline */
+.tabs-underline {
+    gap: var(--ax-tabs-underline-gap);
+    border-bottom: var(--ax-tabs-underline-underline-height) solid var(--ax-tabs-underline-border-color);
+}
+
+.tabs-underline a, .tabs-underline button, .tabs-underline .tab {
+    color: var(--ax-tabs-underline-text);
+    padding: var(--ax-tabs-underline-padding);
+    margin-bottom: calc(var(--ax-tabs-underline-underline-height) * -1);
+    border-top-left-radius: var(--ax-tabs-underline-radius);
+    border-top-right-radius: var(--ax-tabs-underline-radius);
+
+    &:hover {
+        background-color: var(--ax-tabs-underline-bg-hover);
+    }
+
+    &.active, &.selected, &[aria-current] {
+        border-bottom: var(--ax-tabs-underline-underline-height) solid var(--ax-tabs-underline-selected-bg);
+    }
+}
+
+/* pills */
+
+.tabs-pills {
+    background-color: var(--ax-tabs-pills-tab-bg);
+    border-radius: var(--ax-tabs-pills-radius);
+    padding: calc(var(--spacing) / 2);
+}
+
+.tabs-pills a, .tabs-pills button, .tabs-pills .tab {
+    color: var(--ax-tabs-pills-text);
+    padding: var(--ax-tabs-pills-padding);
+    line-height: var(--ax-tabs-line-height);
+    border-radius: var(--ax-tabs-pills-radius);
+
+    &.active, &.selected, &[aria-current] {
+        background: var(--ax-tabs-pills-selected-bg);
+        box-shadow: var(--ax-tabs-pills-shadow);
+    }
+}
+
+/* filled */
+
+.tabs-filled {
+}
+
+.tabs-filled a, .tabs-filled button, .tabs-filled .tab {
+    color: var(--ax-tabs-filled-text);
+    padding: var(--ax-tabs-filled-padding);
+    line-height: var(--ax-tabs-line-height);
+    border-radius: var(--ax-tabs-filled-radius);
+
+    &.active, &.selected, &[aria-current] {
+        background-color: var(--ax-tabs-filled-selected-bg);
+    }
+}
+
+/* outline */
+
+.tabs-outline {
+    border: var(--ax-tabs-outline-border-width) solid var(--ax-tabs-outline-border-color);
+    border-radius: var(--ax-tabs-outline-radius);
+}
+
+.tabs-outline a, .tabs-outline button, .tabs-outline .tab {
+    color: var(--ax-tabs-outline-text);
+    padding: var(--ax-tabs-outline-padding);
+    line-height: var(--ax-tabs-line-height);
+    border-right: 1px solid var(--ax-tabs-outline-border-color);
+
+    &.active, &.selected, &[aria-current] {
+        background-color: var(--ax-tabs-outline-selected-bg);
+    }
+}
+

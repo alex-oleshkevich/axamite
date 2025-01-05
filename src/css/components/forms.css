@@ -1,0 +1,273 @@
+@layer theme {
+    :root {
+        --ax-input-padding: var(--ax-control-padding);
+        --ax-input-text: var(--text-color-text);
+        --ax-input-border-color: var(--border-color-border);
+        --ax-input-bg: white;
+        --ax-input-line-height: calc(var(--spacing) * 5);
+        --ax-input-height: calc(var(--spacing) * 9);
+        --ax-input-border-radius: var(--ax-radius);
+
+        --ax-input-disabled-text: var(--text-color-secondary);
+        --ax-input-disabled-bg: color-mix(in srgb, black, transparent 97%);
+        --ax-input-disabled-border-color: var(--border-color-border);
+        --ax-input-checkbox-size: calc(var(--spacing) * 6);
+        --ax-input-checkbox-radius: calc(var(--spacing) * 3);
+        --ax-input-checkbox-checked-color: var(--background-color-accent);
+        --ax-input-checkbox-hover-color: var(--background-color-accent-hover);
+        --ax-input-checkbox-active-color: var(--background-color-accent-active);
+
+        --ax-input-checkbox-icon: url("data:image/svg+xml,%0A%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 0C10.72 0 10.47 0.11 10.29 0.29L4 6.59L1.71 4.29C1.53 4.11 1.28 4 1 4C0.45 4 0 4.45 0 5C0 5.28 0.11 5.53 0.29 5.71L3.29 8.71C3.47 8.89 3.72 9 4 9C4.28 9 4.53 8.89 4.71 8.71L11.71 1.71C11.89 1.53 12 1.28 12 1C12 0.45 11.55 0 11 0Z' fill='white'/%3E%3C/svg%3E%0A");
+        --ax-input-radio-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+
+        --ax-input-switch-width: calc(var(--spacing) * 10);
+        --ax-input-switch-height: calc(var(--spacing) * 6);
+        --ax-input-switch-knob-size: calc(var(--spacing) * 5);
+        --ax-input-switch-knob-bg: var(--background-color-secondary);
+        --ax-input-switch-disabled-bg: color-mix(in srgb, black, transparent 97%);
+        --ax-input-switch-transition-speed: 100ms;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --ax-input-bg: var(--color-mono-800);
+        }
+    }
+}
+
+@layer components {
+    input[type="text"],
+    input[type="number"],
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="file"],
+    input[type="month"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    input[type="month"],
+    select, textarea,
+    .form-control {
+        padding: var(--ax-input-padding);
+        color: var(--ax-input-text);
+        background-color: var(--ax-input-bg);
+        border: 1px solid var(--ax-input-border-color);
+        line-height: var(--ax-input-line-height);
+        min-height: var(--ax-input-height);
+        border-radius: var(--ax-input-border-radius);
+        box-sizing: border-box;
+        width: 100%;
+
+
+        &:focus {
+            outline: none;
+            box-shadow: var(--ax-focus-ring);
+        }
+
+        &:disabled {
+            --ax-input-text: var(--ax-input-disabled-text);
+            --ax-input-bg: var(--ax-input-disabled-bg);
+            --ax-input-border-color: var(--ax-input-disabled-border-color);
+            cursor: not-allowed;
+        }
+
+        &::placeholder {
+            color: var(--text-color-secondary);
+        }
+    }
+
+    input[type="checkbox"]:not(.form-switch), input[type="radio"] {
+        appearance: none;
+        display: inline-flex;
+        align-content: center;
+        justify-content: center;
+        background-color: var(--ax-input-bg);
+        border: 1px solid var(--ax-input-border-color);
+        border-radius: var(--ax-input-border-radius);
+        border-radius: 0.5rem;
+        aspect-ratio: 1;
+        place-content: center;
+        height: var(--ax-input-checkbox-size);
+        width: var(--ax-input-checkbox-size);
+
+        &:focus {
+            outline: none;
+            box-shadow: var(--ax-focus-ring);
+        }
+
+        &:not(:disabled):checked {
+            --ax-input-bg: var(--ax-input-checkbox-checked-color);
+        }
+
+        &:not(:disabled):checked:hover {
+            --ax-input-bg: var(--ax-input-checkbox-hover-color);
+        }
+
+        &:not(:disabled):checked:active {
+            --ax-input-bg: var(--ax-input-checkbox-hover-active);
+        }
+
+        &:disabled {
+            --ax-input-text: var(--ax-input-disabled-text);
+            --ax-input-bg: var(--ax-input-disabled-bg);
+            --ax-input-border-color: var(--ax-input-disabled-border-color);
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+    }
+
+    input[type="checkbox"]::before,
+    input[type="radio"]::before {
+        content: "";
+        width: var(--ax-input-checkbox-size);
+        height: var(--ax-input-checkbox-size);
+        box-sizing: border-box;
+        transform: scale(0);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: var(--ax-input-checkbox-icon);
+    }
+
+    input[type="checkbox"]:checked::before,
+    input[type="radio"]:checked::before {
+        transform: scale(1);
+    }
+
+    input[type="radio"]::before {
+        background-position: inherit;
+        background-image: var(--ax-input-radio-icon);
+    }
+
+    input[type="radio"] {
+        border-radius: 100%;
+    }
+
+    input[type="checkbox"].form-switch,
+    input[type="checkbox"][role="switch"] {
+        appearance: none;
+        border-radius: var(--ax-input-checkbox-radius);
+        border: 1px solid var(--ax-input-border-color);
+        width: var(--ax-input-switch-width);
+        height: var(--ax-input-switch-height);
+        background-color: var(--ax-input-switch-bg);
+        padding: 1px;
+
+        &::after {
+            content: '';
+            display: block;
+            border-radius: 50%;
+            width: var(--ax-input-switch-knob-size);
+            height: var(--ax-input-switch-knob-size);
+            background-color: var(--ax-input-switch-knob-bg);
+            transform: translateX(var(--x, 0));
+            transition: all ease-in-out var(--ax-input-switch-transition-speed);
+        }
+
+        &:checked {
+            --ax-input-switch-knob-bg: white;
+            --x: 75%;
+        }
+
+        &:checked:not(:disabled) {
+            --ax-input-switch-bg: var(--background-color-accent);
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            --ax-input-switch-bg: var(--ax-input-switch-disabled-bg);
+        }
+
+        &:disabled::after {
+            --ax-input-switch-knob-bg: white;
+        }
+    }
+
+    textarea {
+        min-height: 9rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .form-group label, .form-label {
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+    }
+
+    .form-group:has(> [type="checkbox"]),
+    .form-group:has(> [type="radio"]) {
+        flex-direction: row-reverse;
+        justify-content: start;
+        gap: 0.375rem;
+    }
+
+    .form-group label:has([type="checkbox"]),
+    .form-group label:has([type="radio"]),
+    .form-check {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 0.375rem;
+    }
+
+    form .form-group:not(:last-child),
+    .form-fieldset > .form-group:not(:last-child){
+        margin-bottom: calc(var(--spacing) * 4);
+    }
+
+    .form-help {
+        font-size: var(--font-sm);
+        color: var(--text-color-secondary);
+    }
+
+    .form-errors {
+        font-size: var(--font-sm);
+        color: var(--text-color-danger);
+
+        & > ul, & > ul li {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .input-group:has(select + button),
+    .input-group:has(input + button) {
+        display: flex;
+        align-items: center;
+
+        & input, & select {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        & button {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    .input-group:has(button + select),
+    .input-group:has(button + input) {
+        display: flex;
+        align-items: center;
+
+        & input, & select {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        & button {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+}

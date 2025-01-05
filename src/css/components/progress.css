@@ -1,0 +1,77 @@
+@layer theme {
+    :root {
+        --ax-progress-bg: var(--background-color-accent);
+        --ax-progress-rail-bg: var(--background-color-surface3);
+        --ax-progress-radius: var(--ax-radius);
+
+        /* default */
+        --ax-progress-height: calc(var(--spacing) * 2);
+
+        /* small */
+        --ax-progress-height-sm: calc(var(--spacing));
+        --ax-progress-radius-sm: 0;
+
+        /* large */
+        --ax-progress-radius-lg: var(--ax-radius);
+        --ax-progress-height-lg: calc(var(--spacing) * 4);
+    }
+}
+
+@layer components {
+    .progress {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        border-radius: var(--ax-progress-radius);
+        background: var(--ax-progress-rail-bg);
+    }
+
+    .progress-bar {
+        height: var(--ax-progress-height);
+        background: var(--ax-progress-bg);
+    }
+
+    .progress-lg {
+        --ax-progress-radius: var(--ax-progress-radius-lg);
+        --ax-progress-height: var(--ax-progress-height-lg);
+    }
+
+    .progress-sm {
+        --ax-progress-radius: var(--ax-progress-radius-sm);
+        --ax-progress-height: var(--ax-progress-height-sm);
+    }
+
+    .progress.progress-indeterminate {
+        height: var(--ax-progress-height);
+    }
+
+    .progress.progress-indeterminate .progress-bar {
+        width: 50%!important;
+        left: -50%;
+        position: absolute;
+        animation: indeterminate-progress 1.85s ease-in 0.5s infinite;
+    }
+
+    .progress.progress-danger {
+        --ax-progress-bg: var(--background-color-danger);
+    }
+
+    .progress.progress-warning {
+        --ax-progress-bg: var(--background-color-warning);
+    }
+
+    .progress.progress-success {
+        --ax-progress-bg: var(--background-color-success);
+    }
+
+    @keyframes indeterminate-progress {
+        0% {
+            transform: translateX(0);
+            width: 50%;
+        }
+
+        to {
+            transform: translateX(400%);
+        }
+    }
+}

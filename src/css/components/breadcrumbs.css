@@ -1,0 +1,51 @@
+@layer theme {
+    :root {
+        --ax-breadcrumb-padding-y: calc(var(--spacing));
+        --ax-breadcrumb-padding-x: calc(var(--spacing));
+        --ax-breadcrumb-line-height: calc(var(--spacing) * 6);
+        --ax-breadcrumb-gap: calc(var(--spacing) * 2);
+        --ax-breadcrumb-selected-color: var(--text-color-secondary);
+
+        --ax-breadcrumb-color: var(--text-color-text);
+        --ax-breadcrumb-radius: calc(var(--spacing) * 1.5);
+        --ax-breadcrumb-bg: var(--background-color-transparent);
+        --ax-breadcrumb-separator: '/';
+        --ax-breadcrumb-separator-color: var(--text-color-secondary);
+    }
+}
+
+@layer components {
+    .breadcrumbs {
+        display: flex;
+        align-items: center;
+    }
+
+    .breadcrumbs>a {
+        display: flex;
+        align-items: center;
+        gap: var(--ax-breadcrumb-gap);
+        position: relative;
+        color: var(--ax-breadcrumb-color);
+        padding: var(--ax-breadcrumb-padding-y) var(--ax-breadcrumb-padding-x);
+        line-height: var(--ax-breadcrumb-line-height);
+        background: var(--ax-breadcrumb-bg);
+        border-radius: var(--ax-breadcrumb-radius);
+
+        &:not(span):hover {
+            text-decoration: underline;
+        }
+    }
+
+    .breadcrumbs>a+a {
+        &::before {
+            content: var(--ax-breadcrumb-separator);
+            color: var(--ax-breadcrumb-separator-color);
+            padding-right: var(--ax-breadcrumb-padding-y);
+        }
+    }
+
+    .breadcrumbs>a.active, .breadcrumbs>a[aria-current="page"] {
+        pointer-events: none;
+        color: var(--ax-breadcrumb-selected-color);
+    }
+}

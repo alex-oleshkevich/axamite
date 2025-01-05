@@ -1,0 +1,75 @@
+@layer theme {
+    :root {
+        --ax-callout-padding: calc(var(--spacing) * 5);
+        --ax-callout-radius: calc(var(--spacing) * 1.5);
+        --ax-callout-border-color: var(--border-color-border);
+        --ax-callout-heading-line-height: calc(var(--line-height) * 6);
+        --ax-callout-bg: transparent;
+
+        --ax-callout-accent-bg: var(--background-color-accent-subtle);
+        --ax-callout-accent-border: var(--border-color-accent-subtle);
+        --ax-callout-success-bg: var(--background-color-success-subtle);
+        --ax-callout-success-border: var(--border-color-success-subtle);
+        --ax-callout-warning-bg: var(--background-color-warning-subtle);
+        --ax-callout-warning-border: var(--border-color-warning-subtle);
+        --ax-callout-danger-bg: var(--background-color-danger-subtle);
+        --ax-callout-danger-border: var(--border-color-danger-subtle);
+    }
+}
+
+@layer components {
+    .callout {
+        width: 100%;
+        padding: var(--ax-callout-padding);
+        border-radius: var(--ax-callout-radius);
+        border: 1px solid var(--ax-callout-border-color);
+        background-color: var(--ax-callout-bg);
+        display: flex;
+        position: relative;
+    }
+
+    .callout .callout-icon {
+        width: calc(var(--spacing) * 10);
+    }
+
+    .callout .callout-body {
+        display: block;
+        width: 100%;
+    }
+
+    .callout .callout-body .callout-heading {
+        font-weight: 600;
+        line-height: var(--ax-callout-heading-line-height);
+        margin-bottom: var(--spacing);
+    }
+
+    .callout .callout-body .callout-content {
+        align-self: stretch;
+    }
+
+    .callout .callout-body .callout-actions {
+        margin-top: calc(var(--spacing) * 4);
+        display: flex;
+        align-items: center;
+        gap: calc(var(--spacing) * 3);
+    }
+
+    /* variants */
+
+    .callout.callout-accent-subtle {
+        --ax-callout-border-color: var(--ax-callout-accent-border);
+        --ax-callout-bg: var(--ax-callout-accent-bg);
+    }
+    .callout.callout-success-subtle {
+        --ax-callout-border-color: var(--ax-callout-success-border);
+        --ax-callout-bg: var(--ax-callout-success-bg);
+    }
+    .callout.callout-warning-subtle {
+        --ax-callout-border-color: var(--ax-callout-warning-border);
+        --ax-callout-bg: var(--ax-callout-warning-bg);
+    }
+    .callout.callout-danger-subtle {
+        --ax-callout-border-color: var(--ax-callout-danger-border);
+        --ax-callout-bg: var(--ax-callout-danger-bg);
+    }
+}

@@ -1,0 +1,88 @@
+@layer theme {
+    :root {
+        --ax-table-header-text: var(--text-color-text);
+        --ax-table-header-bg: var(--background-color-surface2);
+        --ax-table-header-bg-hover: var(--background-color-surface2-hover);
+
+        --ax-table-padding-x: calc(var(--spacing) * 3);
+        --ax-table-padding-y: calc(var(--spacing) * 2);
+        --ax-table-line-height: calc(var(--spacing) * 5);
+        --ax-table-border-color: var(--border-color-border);
+        --ax-table-border-width: 1px;
+
+        --ax-table-bg: var(--background-color-transparent);
+        --ax-table-bg-hover: var(--background-color-transparent-hover);
+        --ax-table-bg-selected: var(--background-color-selected);
+        --ax-table-bg-stripe: var(--background-color-surface2);
+
+        /* small */
+        --ax-table-sm-padding-x: calc(var(--spacing) * 2);
+        --ax-table-sm-padding-y: calc(var(--spacing) * 1);
+    }
+}
+
+@layer components {
+    .table {
+        width: 100%;
+        border-top: var(--ax-table-border-width) solid var(--ax-table-border-color);
+        border-bottom: var(--ax-table-border-width) solid var(--ax-table-border-color);
+        line-height: var(--ax-table-line-height);
+    }
+
+    .table tr {
+        border-top: var(--ax-table-border-width) solid var(--ax-table-border-color);
+    }
+
+    .table thead th {
+        text-align: left;
+        padding: var(--ax-table-padding-y) var(--ax-table-padding-x);
+        font-weight: 600;
+        color: var(--ax-table-header-text);
+        background: var(--ax-table-header-bg);
+    }
+
+    .table thead th.table-sort:hover {
+        background: var(--ax-table-header-bg-hover);
+    }
+
+    .table tbody td {
+        text-align: left;
+        padding: var(--ax-table-padding-y) var(--ax-table-padding-x);
+    }
+
+    .table thead th > a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        color: var(--ax-table-header-text);
+    }
+
+    /* addons */
+    .table tr.selected {
+        background-color: var(--ax-table-bg-selected);
+    }
+
+
+    /* variants */
+    .table.table-striped tbody tr:nth-child(even):not(.selected) {
+        background-color: var(--ax-table-bg-stripe);
+    }
+
+    .table.table-hover tbody tr:hover:not(.selected) {
+        background-color: var(--ax-table-bg-hover);
+    }
+
+    .table.table-bordered th, .table.table-bordered td {
+        border: 1px solid var(--ax-table-border-color);
+    }
+
+    .table.table-borderless {
+        --ax-table-border-width: 0;
+    }
+
+    .table.table-compacts {
+        --ax-table-padding-x: var(--ax-table-sm-padding-x);
+        --ax-table-padding-y: var(--ax-table-sm-padding-y);
+    }
+}

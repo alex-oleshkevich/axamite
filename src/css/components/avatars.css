@@ -1,0 +1,292 @@
+@layer theme {
+    :root {
+        --ax-avatar-size-xs: calc(var(--spacing) * 4);
+        --ax-avatar-size-sm: calc(var(--spacing) * 6);
+        --ax-avatar-size-md: calc(var(--spacing) * 8);
+        --ax-avatar-size-lg: calc(var(--spacing) * 12);
+        --ax-avatar-size-xl: calc(var(--spacing) * 16);
+        --ax-avatar-size-2xl: calc(var(--spacing) * 24);
+        --ax-avatar-text: white;
+        --ax-avatar-bg: var(--background-color-mono);
+        --ax-avatar-line-height: calc(var(--spacing) * 4);
+        --ax-avatar-font-size: calc(var(--spacing) * 3.5);
+        --ax-avatar-size: var(--ax-avatar-size-md);
+        --ax-avatar-border-width: 0;
+        --ax-avatar-border-color: transparent;
+        --ax-avatar-radius: 9999999px;
+    }
+}
+
+@layer components {
+    .avatar {
+        height: var(--ax-avatar-size);
+        width: var(--ax-avatar-size);
+        border-radius: var(--ax-avatar-radius);
+        background: var(--ax-avatar-bg);
+        color: var(--ax-avatar-text);
+        line-height: var(--ax-avatar-line-height);
+        font-size: var(--ax-avatar-font-size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        overflow: hidden;
+        object-fit: contain;
+        border: var(--ax-avatar-border-width) solid var(--ax-avatar-border-color);
+        flex-shrink: 0;
+    }
+
+    .avatar:has(> img) {
+        --ax-avatar-bg: transparent;
+    }
+
+    .avatar:empty::before {
+        content: attr(data-initials);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--ax-avatar-text);
+        line-height: var(--ax-avatar-line-height);
+        font-size: var(--ax-avatar-font-size);
+    }
+
+    .avatar > img, .avatar > svg {
+        height: 100%;
+        width: 100%;
+    }
+
+    .avatar-group {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .avatar-group .avatar {
+        --ax-avatar-border-width: 2px;
+        --ax-avatar-border-color: white;
+    }
+
+    .avatar-group .avatar:not(:first-child) {
+        margin-left: calc(var(--ax-avatar-size) / 3 * -1);
+    }
+
+
+    /* rounded */
+    .avatar-rounded {
+        --ax-avatar-radius: 0.375rem;
+    }
+
+    /* sizes */
+
+    .avatar-xs {
+        --ax-avatar-font-size: 0.625rem;
+        --ax-avatar-size: var(--ax-avatar-size-xs);
+    }
+
+    .avatar-sm {
+        --ax-avatar-font-size: 0.75rem;
+        --ax-avatar-size: var(--ax-avatar-size-sm);
+    }
+
+    .avatar-lg {
+        --ax-avatar-font-size: 1.125rem;
+        --ax-avatar-size: var(--ax-avatar-size-lg);
+    }
+
+    .avatar-xl {
+        --ax-avatar-font-size: 1.5rem;
+        --ax-avatar-size: var(--ax-avatar-size-xl);
+    }
+
+    .avatar-2xl {
+        --ax-avatar-font-size: 2.25rem;
+        --ax-avatar-size: var(--ax-avatar-size-2xl);
+        font-weight: bold;
+    }
+
+    /* colors */
+
+    .avatar-red {
+        --ax-avatar-text: var(--text-color-onred);
+        --ax-avatar-bg: var(--background-color-red);
+    }
+
+    .avatar-yellow {
+        --ax-avatar-text: var(--text-color-onyellow);
+        --ax-avatar-bg: var(--background-color-yellow);
+    }
+
+    .avatar-amber {
+        --ax-avatar-text: var(--text-color-onamber);
+        --ax-avatar-bg: var(--background-color-amber);
+    }
+
+    .avatar-orange {
+        --ax-avatar-text: var(--text-color-onorange);
+        --ax-avatar-bg: var(--background-color-orange);
+    }
+
+    .avatar-lime {
+        --ax-avatar-text: var(--text-color-onlime);
+        --ax-avatar-bg: var(--background-color-lime);
+    }
+
+    .avatar-green {
+        --ax-avatar-text: var(--text-color-ongreen);
+        --ax-avatar-bg: var(--background-color-green);
+    }
+
+    .avatar-emerald {
+        --ax-avatar-text: var(--text-color-onemerald);
+        --ax-avatar-bg: var(--background-color-emerald);
+    }
+
+    .avatar-teal {
+        --ax-avatar-text: var(--text-color-onteal);
+        --ax-avatar-bg: var(--background-color-teal);
+    }
+
+    .avatar-cyan {
+        --ax-avatar-text: var(--text-color-oncyan);
+        --ax-avatar-bg: var(--background-color-cyan);
+    }
+
+    .avatar-sky {
+        --ax-avatar-text: var(--text-color-onsky);
+        --ax-avatar-bg: var(--background-color-sky);
+    }
+
+    .avatar-blue {
+        --ax-avatar-text: var(--text-color-onblue);
+        --ax-avatar-bg: var(--background-color-blue);
+    }
+
+    .avatar-indigo {
+        --ax-avatar-text: var(--text-color-onindigo);
+        --ax-avatar-bg: var(--background-color-indigo);
+    }
+
+    .avatar-violet {
+        --ax-avatar-text: var(--text-color-onviolet);
+        --ax-avatar-bg: var(--background-color-violet);
+    }
+
+    .avatar-purple {
+        --ax-avatar-text: var(--text-color-onpurple);
+        --ax-avatar-bg: var(--background-color-purple);
+    }
+
+    .avatar-fuchsia {
+        --ax-avatar-text: var(--text-color-onfuchsia);
+        --ax-avatar-bg: var(--background-color-fuchsia);
+    }
+
+    .avatar-pink {
+        --ax-avatar-text: var(--text-color-onpink);
+        --ax-avatar-bg: var(--background-color-pink);
+    }
+
+    .avatar-rose {
+        --ax-avatar-text: var(--text-color-onrose);
+        --ax-avatar-bg: var(--background-color-rose);
+    }
+
+
+    /* subtle */
+
+    .avatar-subtle {
+        --ax-avatar-border-width: 1px;
+        --ax-avatar-border-color: var(--text-color-mono-subtle);
+        --ax-avatar-text: var(--text-color-onmono-subtle);
+        --ax-avatar-bg: var(--background-color-mono-subtle);
+    }
+
+    .avatar-subtle.avatar-red {
+        --ax-avatar-text: var(--text-color-onred-subtle);
+        --ax-avatar-bg: var(--background-color-red-subtle);
+    }
+
+    .avatar-subtle.avatar-yellow {
+        --ax-avatar-text: var(--text-color-onyellow-subtle);
+        --ax-avatar-bg: var(--background-color-yellow-subtle);
+    }
+
+    .avatar-subtle.avatar-amber {
+        --ax-avatar-text: var(--text-color-onamber-subtle);
+        --ax-avatar-bg: var(--background-color-amber-subtle);
+    }
+
+    .avatar-subtle.avatar-orange {
+        --ax-avatar-text: var(--text-color-onorange-subtle);
+        --ax-avatar-bg: var(--background-color-orange-subtle);
+    }
+
+    .avatar-subtle.avatar-lime {
+        --ax-avatar-text: var(--text-color-onlime-subtle);
+        --ax-avatar-bg: var(--background-color-lime-subtle);
+    }
+
+    .avatar-subtle.avatar-green {
+        --ax-avatar-text: var(--text-color-ongreen-subtle);
+        --ax-avatar-bg: var(--background-color-green-subtle);
+    }
+
+    .avatar-subtle.avatar-emerald {
+        --ax-avatar-text: var(--text-color-onemerald-subtle);
+        --ax-avatar-bg: var(--background-color-emerald-subtle);
+    }
+
+    .avatar-subtle.avatar-teal {
+        --ax-avatar-text: var(--text-color-onteal-subtle);
+        --ax-avatar-bg: var(--background-color-teal-subtle);
+    }
+
+    .avatar-subtle.avatar-cyan {
+        --ax-avatar-text: var(--text-color-oncyan-subtle);
+        --ax-avatar-bg: var(--background-color-cyan-subtle);
+    }
+
+    .avatar-subtle.avatar-sky {
+        --ax-avatar-text: var(--text-color-onsky-subtle);
+        --ax-avatar-bg: var(--background-color-sky-subtle);
+    }
+
+    .avatar-subtle.avatar-blue {
+        --ax-avatar-text: var(--text-color-onblue-subtle);
+        --ax-avatar-bg: var(--background-color-blue-subtle);
+    }
+
+    .avatar-subtle.avatar-indigo {
+        --ax-avatar-text: var(--text-color-onindigo-subtle);
+        --ax-avatar-bg: var(--background-color-indigo-subtle);
+    }
+
+    .avatar-subtle.avatar-violet {
+        --ax-avatar-text: var(--text-color-onviolet-subtle);
+        --ax-avatar-bg: var(--background-color-violet-subtle);
+    }
+
+    .avatar-subtle.avatar-purple {
+        --ax-avatar-text: var(--text-color-onpurple-subtle);
+        --ax-avatar-bg: var(--background-color-purple-subtle);
+    }
+
+    .avatar-subtle.avatar-fuchsia {
+        --ax-avatar-text: var(--text-color-onfuchsia-subtle);
+        --ax-avatar-bg: var(--background-color-fuchsia-subtle);
+    }
+
+    .avatar-subtle.avatar-pink {
+        --ax-avatar-text: var(--text-color-onpink-subtle);
+        --ax-avatar-bg: var(--background-color-pink-subtle);
+    }
+
+    .avatar-subtle.avatar-rose {
+        --ax-avatar-text: var(--text-color-onrose-subtle);
+        --ax-avatar-bg: var(--background-color-rose-subtle);
+    }
+
+}
+

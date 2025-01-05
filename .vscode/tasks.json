@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "tailwind",
+            "type": "shell",
+            "command": "npm",
+            "args": [
+                "run",
+                "watch"
+            ],
+        },
+        {
+            "label": "docs",
+            "type": "shell",
+            "command": "npm",
+            "args": [
+                "run",
+                "docs:dev"
+            ],
+        },
+    ]
+}

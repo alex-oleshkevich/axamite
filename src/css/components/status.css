@@ -1,0 +1,127 @@
+@layer theme {
+    :root {
+        --ax-dot-bg: var(--color-mono-500);
+        --ax-dot-size: calc(var(--spacing) * 3);
+        --ax-dot-size-sm: calc(var(--spacing) * 2);
+        --ax-status-gap: calc(var(--spacing) * 2);
+        --ax-status-border-color: transparent;
+        --ax-status-font-size: inherit;
+        --ax-status-line-height: calc(var(--spacing) * 5);
+        --ax-status-padding: calc(var(--spacing)) calc(var(--spacing) * 2);
+        --ax-status-radius: var(--radius-2xl);
+    }
+}
+
+@layer components {
+    .dot {
+        display: inline-block;
+        height: var(--ax-dot-size);
+        width: var(--ax-dot-size);
+        border-radius: 9999px;
+        background: var(--ax-dot-bg);
+    }
+
+    .dot-sm {
+        --ax-dot-size: var(--ax-dot-size-sm);
+    }
+
+    .dot-accent {
+        --ax-dot-bg: var(--background-color-accent);
+    }
+
+    .dot-warning {
+        --ax-dot-bg: var(--background-color-warning);
+    }
+
+    .dot-success {
+        --ax-dot-bg: var(--background-color-success);
+    }
+
+    .dot-danger {
+        --ax-dot-bg: var(--background-color-danger);
+    }
+
+    .dot-red {
+        --ax-dot-bg: var(--background-color-red);
+    }
+
+    .dot-orange {
+        --ax-dot-bg: var(--background-color-orange);
+    }
+
+    .dot-amber {
+        --ax-dot-bg: var(--background-color-amber);
+    }
+
+    .dot-yellow {
+        --ax-dot-bg: var(--background-color-yellow);
+    }
+
+    .dot-lime {
+        --ax-dot-bg: var(--background-color-lime);
+    }
+
+    .dot-green {
+        --ax-dot-bg: var(--background-color-green);
+    }
+
+    .dot-emerald {
+        --ax-dot-bg: var(--background-color-emerald);
+    }
+
+    .dot-teal {
+        --ax-dot-bg: var(--background-color-teal);
+    }
+
+    .dot-cyan {
+        --ax-dot-bg: var(--background-color-cyan);
+    }
+
+    .dot-sky {
+        --ax-dot-bg: var(--background-color-sky);
+    }
+
+    .dot-blue {
+        --ax-dot-bg: var(--background-color-blue);
+    }
+
+    .dot-indigo {
+        --ax-dot-bg: var(--background-color-indigo);
+    }
+
+    .dot-violet {
+        --ax-dot-bg: var(--background-color-violet);
+    }
+
+    .dot-purple {
+        --ax-dot-bg: var(--background-color-purple);
+    }
+
+    .dot-fuchsia {
+        --ax-dot-bg: var(--background-color-fuchsia);
+    }
+
+    .dot-rose {
+        --ax-dot-bg: var(--background-color-rose);
+    }
+
+    .dot-pink {
+        --ax-dot-bg: var(--background-color-pink);
+    }
+
+    .status {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--ax-status-gap);
+        font-weight: var(--font-medium);
+        border: 1px solid var(--ax-status-border-color);
+        font-size: var(--ax-status-font-size);
+        padding: var(--ax-status-padding);
+        border-radius: var(--ax-status-radius);
+        line-height: var(--ax-status-line-height);
+    }
+
+    .status-outline {
+        --ax-status-border-color: var(--border-color-border);
+    }
+}

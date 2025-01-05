@@ -1,0 +1,243 @@
+@layer theme {
+    :root {
+        --ax-button-padding: var(--ax-control-padding);
+        --ax-button-font-size: var(--ax-font-size);
+        --ax-button-line-height: calc(var(--spacing) * 5);
+        --ax-button-height: calc(var(--spacing) * 9);
+        --ax-button-border-radius: var(--ax-radius);
+        --ax-button-transition-speed: var(--ax-transition-speed);
+        --ax-button-shadow: var(--shadow-xs);
+        --ax-button-icon-size: calc(var(--spacing) * 5);
+        --ax-button-border-color: var(--border-color-border);
+
+        /* small */
+        --ax-button-padding-sm: var(--ax-control-padding-sm);
+        --ax-button-height-sm: calc(var(--spacing) * 4);
+        --ax-button-radius-sm: var(--radius-sm);
+
+        /* standard */
+        --ax-button-text: var(--text-color-text);
+        --ax-button-bg: white;
+        --ax-button-bg-hover: var(--background-color-transparent-hover);
+        --ax-button-bg-active: var(--background-color-transparent-active);
+
+        /* accent */
+        --ax-button-accent-text: var(--text-color-onaccent);
+        --ax-button-accent-bg: var(--background-color-accent);
+        --ax-button-accent-bg-hover: var(--background-color-accent-hover);
+        --ax-button-accent-bg-active: var(--background-color-accent-active);
+
+        /* secondary */
+        --ax-button-secondary-text: var(--text-color-onsurface3);
+        --ax-button-secondary-bg: var(--background-color-surface3);
+        --ax-button-secondary-bg-hover: var(--background-color-surface3-hover);
+        --ax-button-secondary-bg-active: var(--background-color-surface3-active);
+
+        /* danger */
+        --ax-button-danger-text: var(--text-color-ondanger);
+        --ax-button-danger-bg: var(--background-color-danger);
+        --ax-button-danger-bg-hover: var(--background-color-danger-hover);
+        --ax-button-danger-bg-active: var(--background-color-danger-active);
+
+        /* warning */
+        --ax-button-warning-text: var(--text-color-onwarning);
+        --ax-button-warning-bg: var(--background-color-warning);
+        --ax-button-warning-bg-hover: var(--background-color-warning-hover);
+        --ax-button-warning-bg-active: var(--background-color-warning-active);
+
+        /* text / flat */
+        --ax-button-flat-border-color: transparent;
+        --ax-button-flat-text: var(--text-color-text);
+        --ax-button-flat-bg: transparent;
+        --ax-button-flat-bg-hover: var(--background-color-surface-hover);
+        --ax-button-flat-bg-active: var(--background-color-surface-active);
+
+        /* link */
+        --ax-button-link-text: var(--text-color-link);
+        --ax-button-link-bg-hover: var(--background-color-surface-hover);
+        --ax-button-link-bg-active: var(--background-color-surface-active);
+
+        /* selected button */
+        --ax-button-selected-text: var(--text-color-onselected);
+        --ax-button-selected-bg: var(--background-color-selected);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            /* standard */
+            --ax-button-text: var(--color-mono-900);
+            --ax-button-bg: color-mix(in srgb, white, transparent 10%);
+            --ax-button-bg-hover: color-mix(in srgb, white, transparent 40%);
+            --ax-button-bg-active: color-mix(in srgb, white, transparent 60%);
+
+            /* secondary */
+            --ax-button-secondary-bg: color-mix(in srgb, white, transparent 90%);
+            --ax-button-secondary-bg-hover: color-mix(in srgb, white, transparent 85%);
+            --ax-button-secondary-bg-active: color-mix(in srgb, white, transparent 75%);
+
+            /* text / flat / link*/
+            --ax-button-flat-bg-hover: color-mix(in srgb, white, transparent 90%);
+            --ax-button-flat-bg-active: color-mix(in srgb, white, transparent 80%);
+            --ax-button-link-bg-hover: color-mix(in srgb, white, transparent 90%);
+            --ax-button-link-bg-active: color-mix(in srgb, white, transparent 80%);
+        }
+    }
+}
+
+@layer components {
+    .btn {
+        padding: var(--ax-button-padding);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: calc(var(--spacing) * 2);
+        font-size: var(--ax-button-font-size);
+        color: var(--ax-button-text);
+        background: var(--ax-button-bg);
+        border: 1px solid var(--ax-button-border-color);
+        line-height: var(--ax-button-line-height);
+        min-height: var(--ax-button-height);
+        border-radius: var(--ax-button-border-radius);
+        white-space: nowrap;
+        transition: background-color ease-in-out var(--ax-button-transition-speed);
+        font-weight: 500;
+        flex-shrink: 0;
+        box-shadow: var(--ax-button-shadow);
+        box-sizing: border-box;
+    }
+
+    .btn>svg {
+        height: var(--ax-button-icon-size);
+        width: var(--ax-button-icon-size);
+    }
+
+    .btn[disabled] {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    .btn:hover {
+        background-color: var(--ax-button-bg-hover);
+    }
+
+    .btn:active {
+        background-color: var(--ax-button-bg-active);
+    }
+
+    .btn:focus-visible {
+        outline: none;
+        box-shadow: var(--ax-focus-ring);
+    }
+
+    .btn.selected,
+    .btn[aria-selected="true"] {
+        color: var(--ax-button-selected-text);
+        background-color: var(--ax-button-selected-bg);
+    }
+
+    /* Variants */
+
+    .btn-accent,
+    .btn-primary {
+        --ax-button-text: var(--ax-button-accent-text);
+        --ax-button-bg: var(--ax-button-accent-bg);
+
+        &:hover {
+            background-color: var(--ax-button-accent-bg-hover);
+        }
+
+        &:active {
+            background-color: var(--ax-button-accent-bg-active);
+        }
+    }
+
+    .btn-secondary {
+        --ax-button-text: var(--ax-button-secondary-text);
+        --ax-button-bg: var(--ax-button-secondary-bg);
+        --ax-button-border-color: transparent;
+
+        &:hover {
+            background-color: var(--ax-button-secondary-bg-hover);
+        }
+
+        &:active {
+            background-color: var(--ax-button-secondary-bg-active);
+        }
+    }
+
+    .btn-danger {
+        --ax-button-text: var(--ax-button-danger-text);
+        --ax-button-bg: var(--ax-button-danger-bg);
+
+        &:hover {
+            background-color: var(--ax-button-danger-bg-hover);
+        }
+
+        &:active {
+            background-color: var(--ax-button-danger-bg-active);
+        }
+    }
+
+    .btn-warning {
+        --ax-button-text: var(--ax-button-warning-text);
+        --ax-button-bg: var(--ax-button-warning-bg);
+
+        &:hover {
+            background-color: var(--ax-button-warning-bg-hover);
+        }
+
+        &:active {
+            background-color: var(--ax-button-warning-bg-active);
+        }
+    }
+
+    .btn-link {
+        --ax-button-text: var(--ax-button-link-text);
+        --ax-button-bg: var(--ax-button-link-bg);
+        --ax-button-shadow: none;
+        --ax-button-border-color: transparent;
+
+        &:hover {
+            background-color: var(--ax-button-link-bg-hover);
+        }
+
+        &:active {
+            background-color: var(--ax-button-link-bg-active);
+        }
+    }
+
+    .btn-flat,
+    .btn-text {
+        --ax-button-shadow: none;
+        --ax-button-text: var(--ax-button-flat-text);
+        --ax-button-bg: var(--ax-button-flat-bg);
+        --ax-button-border-color: var(--ax-button-flat-border-color);
+
+        &:hover {
+            background-color: var(--ax-button-flat-bg-hover);
+        }
+
+        &:active {
+            background-color: var(--ax-button-flat-bg-active);
+        }
+    }
+
+    .btn-icon {
+        --ax-button-padding: calc(var(--spacing) * 2);
+    }
+
+    /* Sizes */
+    .btn-sm {
+        --ax-button-padding: var(--ax-button-padding-sm);
+        --ax-button-height: var(--ax-button-height-sm);
+        --ax-button-border-radius: var(--ax-button-radius-sm);
+        --ax-button-line-height: calc(var(--spacing) * 4);
+        --ax-button-icon-size: calc(var(--spacing) * 4);
+    }
+
+    /* Modifiers */
+    .btn-block {
+        width: 100%;
+    }
+}

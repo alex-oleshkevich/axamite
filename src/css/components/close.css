@@ -1,0 +1,63 @@
+@layer theme {
+    :root {
+        --ax-close-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+        --ax-close-radius: var(--radius-md);
+        --ax-close-bg: var(--background-color-transparent);
+        --ax-close-bg-hover: var(--background-color-transparent-hover);
+        --ax-close-bg-active: var(--background-color-transparent-active);
+
+        --ax-close-padding: calc(var(--spacing) * 2);
+        --ax-close-button-size: calc(var(--spacing) * 8);
+
+        --ax-close-filter-inverse: invert(1) grayscale(100%) brightness(100%);
+        --ax-close-filter: none;
+    }
+}
+
+@layer components {
+    .btn-close {
+        height: var(--ax-close-button-size);
+        width: var(--ax-close-button-size);
+        padding: var(--ax-close-padding);
+        border-radius: var(--ax-close-radius);
+        background-color: var(--ax-close-bg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: var(--ax-close-icon);
+        background-size: 50%;
+        filter: var(--ax-close-filter);
+
+        &:hover {
+            --ax-close-bg: var(--ax-close-bg-hover);
+        }
+
+        &:active {
+            --ax-close-bg: var(--ax-close-bg-active);
+        }
+
+        &:focus-visible {
+            outline: none;
+            box-shadow: var(--ax-focus-ring);
+        }
+
+        &:disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+    }
+
+    .btn-close-inverse {
+        --ax-close-filter: var(--ax-close-filter-inverse);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .btn-close {
+            filter: invert(1) grayscale(100%) brightness(80%);
+        }
+
+        .btn-close.btn-close-inverse {
+            --ax-close-icon: var(--ax-close-icon);
+        }
+    }
+}

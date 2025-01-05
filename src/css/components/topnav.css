@@ -1,0 +1,37 @@
+@layer theme {
+    :root {
+        --ax-topnav-gap: calc(var(--spacing) * 6);
+        --ax-topnav-menu-gap: calc(var(--spacing) * 2);
+        --ax-topnav-height: auto;
+        --ax-topnav-padding-x: 0;
+        --ax-topnav-padding-y: calc(var(--spacing) * 2);
+        --ax-topnav-background: var(--background-color-transparent);
+        --ax-topnav-border-width: 0;
+        --ax-topnav-border-color: var(--border-color-border);
+    }
+}
+
+@layer components {
+    .top-nav {
+        --ax-menu-display: flex;
+        --ax-menu-gap: var(--ax-topnav-menu-gap);
+        --ax-menu-item-display: inline-flex;
+        --ax-navbrand-padding: 0;
+        --ax-menu-item-icon-color: var(--text-color-text);
+        --ax-menu-item-width: auto;
+
+        display: flex;
+        align-items: center;
+        gap: var(--ax-topnav-gap);
+        height: var(--ax-topnav-height);
+        padding: var(--ax-topnav-padding-y) var(--ax-topnav-padding-x);
+        background: var(--ax-topnav-background);
+        border-bottom: var(--ax-topnav-border-width) solid var(--ax-topnav-border-color);
+    }
+
+    .top-nav > .user-menu {
+        --ax-usermenu-padding-x: calc(var(--spacing) * 2);
+        --ax-usermenu-padding-y: calc(var(--spacing) * 1);
+        align-self: flex-end;
+    }
+}

@@ -1,0 +1,20 @@
+@layer base {
+    body {
+        color: var(--text-color-text);
+        background-color: var(--ax-bg);
+
+        accent-color: var(--text-color-accent);
+        font-size: var(--ax-font-size);
+        font-family: var(--ax-font-family);
+
+        font-synthesis-weight: none;
+        font-feature-settings: 'liga' 1, 'calt' 1;
+        text-rendering: optimizeLegibility;
+    }
+
+    @supports (font-variation-settings: normal) {
+        :root {
+            font-family: InterVariable, sans-serif;
+        }
+    }
+}

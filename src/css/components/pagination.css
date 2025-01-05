@@ -1,0 +1,45 @@
+@layer theme {}
+
+@layer components {
+    .pagination {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .pagination>.pagination-info {
+        font-weight: 500;
+    }
+
+    .pagination>nav,
+    .pagination>.pagination-nav {
+        font-weight: 500;
+        align-items: center;
+        display: flex;
+        gap: calc(var(--spacing) * 1);
+    }
+
+    @media (max-width: 756px) {
+        .pagination>.pagination-info {
+            display: none;
+        }
+
+        .pagination>nav,
+        .pagination>.pagination-nav {
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .pagination>nav > .btn:not(:first-child):not(:last-child),
+        .pagination>.pagination-nav > .btn:not(:first-child):not(:last-child) {
+            display: none;
+        }
+
+        .pagination>nav > .btn:not(:first-child):not(:last-child),
+        .pagination>.pagination-nav > .btn:not(:first-child):not(:last-child) {
+            display: none;
+        }
+    }
+
+}

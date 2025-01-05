@@ -1,0 +1,44 @@
+@layer theme {
+    :root {
+        --ax-divider-padding: calc(var(--spacing) * 2.5);
+        --ax-divider-color: var(--text-color-secondary);
+        --ax-divider-border-color: var(--border-color-border);
+        --ax-divider-line-height: calc(var(--spacing) * 2);
+        --ax-divider-min-height: calc(var(--spacing) * 2);
+        --ax-divider-height: calc(var(--spacing) /2);
+        --ax-divider-gap: calc(var(--spacing) * 3);
+    }
+}
+
+@layer components {
+    .divider, hr {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        min-height: var(--ax-divider-min-height);
+        line-height: var(--ax-divider-line-height);
+        color: var(--ax-divider-color);
+        gap: 0;
+    }
+
+    .divider:not(:empty) {
+        gap: var(--ax-divider-gap);
+    }
+
+    .divider::after,
+    .divider::before {
+        content: '';
+        height: var(--ax-divider-height);
+        flex-grow: 1;
+        background: var(--ax-divider-border-color);
+    }
+
+    .divider.divider-left::before {
+        display: none;
+    }
+
+    .divider.divider-right::after {
+        display: none;
+    }
+}

@@ -1,0 +1,322 @@
+@layer theme {
+    :root {
+        --ax-counter-text: white;
+        --ax-counter-bg: var(--background-color-mono);
+        --ax-counter-border: var(--border-color-mono-subtle);
+        --ax-counter-padding: calc(var(--spacing) * 2);
+        --ax-counter-line-height: calc(var(--spacing) * 4);
+        --ax-counter-size: calc(var(--spacing) * 6);
+    }
+}
+
+@layer components {
+    .counter {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        border-radius: 99999px;
+        color: var(--ax-counter-text);
+        padding: var(--ax-counter-padding);
+        line-height: var(--ax-counter-line-height);
+        background: var(--ax-counter-bg);
+        height: var(--ax-counter-size);
+        width: var(--ax-counter-size);
+        border: 1px solid var(--ax-counter-border);
+    }
+
+    /* sizes */
+
+    .counter-lg {
+        --ax-counter-padding: calc(var(--spacing) * 3);
+        --ax-counter-size: calc(var(--spacing) * 8);
+    }
+
+    /* filled */
+
+    .counter-red {
+        --ax-counter-border: var(--border-color-red);
+        --ax-counter-bg: var(--background-color-red);
+        --ax-counter-text: var(--text-color-onred);
+    }
+
+    .counter-orange {
+        --ax-counter-border: var(--border-color-orange);
+        --ax-counter-bg: var(--background-color-orange);
+        --ax-counter-text: var(--text-color-onorange);
+    }
+
+    .counter-amber {
+        --ax-counter-border: var(--border-color-amber);
+        --ax-counter-bg: var(--background-color-amber);
+        --ax-counter-text: var(--text-color-onamber);
+    }
+
+    .counter-yellow {
+        --ax-counter-border: var(--border-color-yellow);
+        --ax-counter-bg: var(--background-color-yellow);
+        --ax-counter-text: var(--text-color-onyellow);
+    }
+
+    .counter-lime {
+        --ax-counter-border: var(--border-color-lime);
+        --ax-counter-bg: var(--background-color-lime);
+        --ax-counter-text: var(--text-color-onlime);
+    }
+
+    .counter-green {
+        --ax-counter-border: var(--border-color-green);
+        --ax-counter-bg: var(--background-color-green);
+        --ax-counter-text: var(--text-color-ongreen);
+    }
+
+    .counter-emerald {
+        --ax-counter-border: var(--border-color-emerald);
+        --ax-counter-bg: var(--background-color-emerald);
+        --ax-counter-text: var(--text-color-onemerald);
+    }
+
+    .counter-teal {
+        --ax-counter-border: var(--border-color-teal);
+        --ax-counter-bg: var(--background-color-teal);
+        --ax-counter-text: var(--text-color-onteal);
+    }
+
+    .counter-cyan {
+        --ax-counter-border: var(--border-color-cyan);
+        --ax-counter-bg: var(--background-color-cyan);
+        --ax-counter-text: var(--text-color-oncyan);
+    }
+
+    .counter-sky {
+        --ax-counter-border: var(--border-color-sky);
+        --ax-counter-bg: var(--background-color-sky);
+        --ax-counter-text: var(--text-color-onsky);
+    }
+
+    .counter-blue {
+        --ax-counter-border: var(--border-color-blue);
+        --ax-counter-bg: var(--background-color-blue);
+        --ax-counter-text: var(--text-color-onblue);
+    }
+
+    .counter-indigo {
+        --ax-counter-border: var(--border-color-indigo);
+        --ax-counter-bg: var(--background-color-indigo);
+        --ax-counter-text: var(--text-color-onindigo);
+    }
+
+    .counter-violet {
+        --ax-counter-border: var(--border-color-violet);
+        --ax-counter-bg: var(--background-color-violet);
+        --ax-counter-text: var(--text-color-onviolet);
+    }
+
+    .counter-purple {
+        --ax-counter-border: var(--border-color-purple);
+        --ax-counter-bg: var(--background-color-purple);
+        --ax-counter-text: var(--text-color-onpurple);
+    }
+
+    .counter-fuchsia {
+        --ax-counter-border: var(--border-color-fuchsia);
+        --ax-counter-bg: var(--background-color-fuchsia);
+        --ax-counter-text: var(--text-color-onfuchsia);
+    }
+
+    .counter-rose {
+        --ax-counter-border: var(--border-color-rose);
+        --ax-counter-bg: var(--background-color-rose);
+        --ax-counter-text: var(--text-color-onrose);
+    }
+
+    .counter-pink {
+        --ax-counter-border: var(--border-color-pink);
+        --ax-counter-bg: var(--background-color-pink);
+        --ax-counter-text: var(--text-color-onpink);
+    }
+
+
+    /* subtle */
+
+    .counter-subtle {
+    }
+
+    .counter-subtle.counter-red {
+        --ax-counter-border: var(--border-color-red-subtle);
+        --ax-counter-text: var(--text-color-onred-subtle);
+        --ax-counter-bg: var(--background-color-red-subtle);
+    }
+
+    .counter-subtle.counter-orange {
+        --ax-counter-border: var(--border-color-orange-subtle);
+        --ax-counter-text: var(--text-color-onorange-subtle);
+        --ax-counter-bg: var(--background-color-orange-subtle);
+    }
+
+    .counter-subtle.counter-amber {
+        --ax-counter-border: var(--border-color-amber-subtle);
+        --ax-counter-text: var(--text-color-onamber-subtle);
+        --ax-counter-bg: var(--background-color-amber-subtle);
+    }
+
+    .counter-subtle.counter-yellow {
+        --ax-counter-border: var(--border-color-yellow-subtle);
+        --ax-counter-text: var(--text-color-onyellow-subtle);
+        --ax-counter-bg: var(--background-color-yellow-subtle);
+    }
+
+    .counter-subtle.counter-lime {
+        --ax-counter-border: var(--border-color-lime-subtle);
+        --ax-counter-text: var(--text-color-onlime-subtle);
+        --ax-counter-bg: var(--background-color-lime-subtle);
+    }
+
+    .counter-subtle.counter-green {
+        --ax-counter-border: var(--border-color-green-subtle);
+        --ax-counter-text: var(--text-color-ongreen-subtle);
+        --ax-counter-bg: var(--background-color-green-subtle);
+    }
+
+    .counter-subtle.counter-emerald {
+        --ax-counter-border: var(--border-color-emerald-subtle);
+        --ax-counter-text: var(--text-color-onemerald-subtle);
+        --ax-counter-bg: var(--background-color-emerald-subtle);
+    }
+
+    .counter-subtle.counter-teal {
+        --ax-counter-border: var(--border-color-teal-subtle);
+        --ax-counter-text: var(--text-color-onteal-subtle);
+        --ax-counter-bg: var(--background-color-teal-subtle);
+    }
+
+    .counter-subtle.counter-cyan {
+        --ax-counter-border: var(--border-color-cyan-subtle);
+        --ax-counter-text: var(--text-color-oncyan-subtle);
+        --ax-counter-bg: var(--background-color-cyan-subtle);
+    }
+
+    .counter-subtle.counter-sky {
+        --ax-counter-border: var(--border-color-sky-subtle);
+        --ax-counter-text: var(--text-color-onsky-subtle);
+        --ax-counter-bg: var(--background-color-sky-subtle);
+    }
+
+    .counter-subtle.counter-blue {
+        --ax-counter-border: var(--border-color-blue-subtle);
+        --ax-counter-text: var(--text-color-onblue-subtle);
+        --ax-counter-bg: var(--background-color-blue-subtle);
+    }
+
+    .counter-subtle.counter-indigo {
+        --ax-counter-border: var(--border-color-indigo-subtle);
+        --ax-counter-text: var(--text-color-onindigo-subtle);
+        --ax-counter-bg: var(--background-color-indigo-subtle);
+    }
+
+    .counter-subtle.counter-violet {
+        --ax-counter-border: var(--border-color-violet-subtle);
+        --ax-counter-text: var(--text-color-onviolet-subtle);
+        --ax-counter-bg: var(--background-color-violet-subtle);
+    }
+
+    .counter-subtle.counter-purple {
+        --ax-counter-border: var(--border-color-purple-subtle);
+        --ax-counter-text: var(--text-color-onpurple-subtle);
+        --ax-counter-bg: var(--background-color-purple-subtle);
+    }
+
+    .counter-subtle.counter-fuchsia {
+        --ax-counter-border: var(--border-color-fuchsia-subtle);
+        --ax-counter-text: var(--text-color-onfuchsia-subtle);
+        --ax-counter-bg: var(--background-color-fuchsia-subtle);
+    }
+
+    .counter-subtle.counter-rose {
+        --ax-counter-border: var(--border-color-rose-subtle);
+        --ax-counter-text: var(--text-color-onrose-subtle);
+        --ax-counter-bg: var(--background-color-rose-subtle);
+    }
+
+    .counter-subtle.counter-pink {
+        --ax-counter-border: var(--border-color-pink-subtle);
+        --ax-counter-text: var(--text-color-onpink-subtle);
+        --ax-counter-bg: var(--background-color-pink-subtle);
+    }
+
+
+    /* outline */
+
+    .counter-outline {
+        --ax-counter-bg: transparent;
+        --ax-counter-text: var(--ax-text-gray);
+    }
+
+    .counter-outline.counter-red {
+        --ax-counter-text: var(--text-color-red);
+    }
+
+    .counter-outline.counter-orange {
+        --ax-counter-text: var(--text-color-orange);
+    }
+
+    .counter-outline.counter-amber {
+        --ax-counter-text: var(--text-color-amber);
+    }
+
+    .counter-outline.counter-yellow {
+        --ax-counter-text: var(--text-color-yellow);
+    }
+
+    .counter-outline.counter-lime {
+        --ax-counter-text: var(--text-color-lime);
+    }
+
+    .counter-outline.counter-green {
+        --ax-counter-text: var(--text-color-green);
+    }
+
+    .counter-outline.counter-emerald {
+        --ax-counter-text: var(--text-color-emerald);
+    }
+
+    .counter-outline.counter-teal {
+        --ax-counter-text: var(--text-color-teal);
+    }
+
+    .counter-outline.counter-cyan {
+        --ax-counter-text: var(--text-color-cyan);
+    }
+
+    .counter-outline.counter-sky {
+        --ax-counter-text: var(--text-color-sky);
+    }
+
+    .counter-outline.counter-blue {
+        --ax-counter-text: var(--text-color-blue);
+    }
+
+    .counter-outline.counter-indigo {
+        --ax-counter-text: var(--text-color-indigo);
+    }
+
+    .counter-outline.counter-violet {
+        --ax-counter-text: var(--text-color-violet);
+    }
+
+    .counter-outline.counter-purple {
+        --ax-counter-text: var(--text-color-purple);
+    }
+
+    .counter-outline.counter-fuchsia {
+        --ax-counter-text: var(--text-color-fuchsia);
+    }
+
+    .counter-outline.counter-rose {
+        --ax-counter-text: var(--text-color-rose);
+    }
+
+    .counter-outline.counter-pink {
+        --ax-counter-text: var(--text-color-pink);
+    }
+}

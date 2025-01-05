@@ -1,0 +1,3060 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Components demo</title>
+    <link href="dist/styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .demo {}
+
+        body>details {
+            margin: 8px 16px;
+        }
+
+        details>section>header,
+        .demo>header {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        details section:not(:last-child) {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+        }
+
+        details section>main,
+        .demo main {
+            padding: 8px;
+        }
+
+        details section>main>* {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- colors -->
+    <details>
+        <summary>Colors</summary>
+        <div class="p-4 space-y-5">
+            <section class="demo space-y-1">
+                <div class="grid grid-cols-9 gap-1">
+                    <div class="p-1 text-center rounded-sm bg-accent text-onaccent">accent</div>
+                    <div class="p-1 text-center rounded-sm bg-success text-onsuccess">success</div>
+                    <div class="p-1 text-center rounded-sm bg-danger text-ondanger">danger</div>
+                    <div class="p-1 text-center rounded-sm bg-warning text-onwarning">warning</div>
+                    <div class="p-1 text-center rounded-sm bg-transparent text-ontransparent">transparent</div>
+                    <div class="p-1 text-center rounded-sm bg-surface text-onsurface">surface</div>
+                    <div class="p-1 text-center rounded-sm bg-surface2 text-onsurface2">surface 2</div>
+                    <div class="p-1 text-center rounded-sm bg-surface3 text-onsurface3">surface 3</div>
+                    <div class="p-1 text-center rounded-sm bg-surface4 text-onsurface4">surface 4</div>
+                </div>
+                <div class="grid grid-cols-9 gap-1">
+                    <div class="p-1 text-center rounded-sm bg-accent-hover text-onaccent">accent hover</div>
+                    <div class="p-1 text-center rounded-sm bg-success-hover text-onsuccess">success hover</div>
+                    <div class="p-1 text-center rounded-sm bg-danger-hover text-ondanger">danger hover</div>
+                    <div class="p-1 text-center rounded-sm bg-warning-hover text-onwarning">warning hover</div>
+                    <div class="p-1 text-center rounded-sm bg-transparent-hover text-ontransparent">transparent hover
+                    </div>
+                    <div class="p-1 text-center rounded-sm bg-surface-hover  text-onsurface">surface hover</div>
+                    <div class="p-1 text-center rounded-sm bg-surface2-hover text-onsurface2">surface 2 hover</div>
+                    <div class="p-1 text-center rounded-sm bg-surface3-hover text-onsurface3">surface 3 hover</div>
+                    <div class="p-1 text-center rounded-sm bg-surface4-hover text-onsurface4">surface 4 hover</div>
+                </div>
+                <div class="grid grid-cols-9 gap-1">
+                    <div class="p-1 text-center rounded-sm bg-accent-active text-onaccent">accent active</div>
+                    <div class="p-1 text-center rounded-sm bg-success-active text-onsuccess">success active</div>
+                    <div class="p-1 text-center rounded-sm bg-danger-active text-ondanger">danger active</div>
+                    <div class="p-1 text-center rounded-sm bg-warning-active text-onwarning">warning active</div>
+                    <div class="p-1 text-center rounded-sm bg-transparent-active text-ontransparent">transparent active
+                    </div>
+                    <div class="p-1 text-center rounded-sm bg-surface-active  text-onsurface">surface active</div>
+                    <div class="p-1 text-center rounded-sm bg-surface2-active text-onsurface2">surface 2 active</div>
+                    <div class="p-1 text-center rounded-sm bg-surface3-active text-onsurface3">surface 3 active</div>
+                    <div class="p-1 text-center rounded-sm bg-surface4-active text-onsurface4">surface 4 active</div>
+                </div>
+                <div class="grid grid-cols-9 gap-1">
+                    <div class="p-1 text-center rounded-sm text-accent">accent</div>
+                    <div class="p-1 text-center rounded-sm text-success">success</div>
+                    <div class="p-1 text-center rounded-sm text-danger">danger</div>
+                    <div class="p-1 text-center rounded-sm text-warning">warning</div>
+                    <div class="p-1 text-center rounded-sm text-muted">muted</div>
+                </div>
+            </section>
+        </div>
+    </details>
+
+    <!-- typo -->
+    <details>
+        <summary>Typography</summary>
+        <div class="p-4 space-y-5">
+            <section class="demo">
+                <header>Text</header>
+                <main>
+                    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+                    <p>Use <a href="#">links</a> for navigation.</p>
+                    <p><del>This line of text is meant to be treated as deleted text.</del></p>
+                    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                    <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                    <p><u>This line of text will render as underlined.</u></p>
+                    <p><small>This line of text is meant to be treated as fine print.</small></p>
+                    <p><strong>This line rendered as bold text.</strong></p>
+                    <p><em>This line rendered as italicized text.</em></p>
+                    <p><abbr title="attribute">attr</abbr></p>
+                    <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+                </main>
+            </section>
+            <section class="demo">
+                <header>Headings</header>
+                <main>
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+                </main>
+            </section>
+
+            <section class="demo">
+                <header>Blockquote</header>
+                <main>
+                    <blockquote>
+                        A well-known quote, contained in a blockquote element.
+                    </blockquote>
+                </main>
+            </section>
+
+            <section class="demo">
+                <header>Lists</header>
+                <main>
+                    <ul>
+                        <li>This is a list.</li>
+                        <li>It appears completely unstyled.</li>
+                        <li>Structurally, it's still a list.</li>
+                        <li>However, this style only applies to immediate child elements.</li>
+                        <li>Nested lists:
+                            <ul>
+                                <li>are unaffected by this style</li>
+                                <li>will still show a bullet</li>
+                                <li>and have appropriate left margin</li>
+                            </ul>
+                        </li>
+                        <li>This may still come in handy in some situations.</li>
+                    </ul>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- article -->
+    <details>
+        <summary>Article</summary>
+        <div class="p-4 space-y-5 prose">
+            <h1>Heading 1</h1>
+
+            <blockquote>
+                Donec porttitor lacus varius, elementum enim eget, vehicula velit. Sed ac tortor venenatis, tincidunt
+                magna et, dapibus lectus.
+            </blockquote>
+            <p>
+                Lorem ipsum <a href="#">dolor sit amet</a>, consectetur <mark>adipiscing</mark> elit. Morbi interdum
+                finibus
+                ullamcorper. Donec urna
+                leo, euismod vitae urna ut, convallis rhoncus turpis. Nullam cursus magna nunc, in suscipit arcu maximus
+                ac. Donec at neque at elit fermentum gravida in malesuada justo. Aliquam consectetur eleifend velit eu
+                accumsan. Aenean tincidunt tortor non dui volutpat laoreet. Vestibulum id tempor justo. Fusce ac
+                ultrices mauris, at imperdiet tortor. Praesent mollis sapien at vestibulum condimentum. Sed cursus
+                convallis ante eu blandit. Sed viverra malesuada diam et accumsan. Suspendisse egestas justo nec
+                volutpat tempor.
+
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>
+                    Item 3
+                    <ol>
+                        <li>Subitem 1</li>
+                        <li>Subitem 2</li>
+                        <li>
+                            Subitem 3
+                            <ol>
+                                <li>Subsubitem 1</li>
+                                <li>Subsubitem 2</li>
+                                <li>Subsubitem 3</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            </p>
+
+            <h2>Heading 2</h2>
+            <p>
+                <kbd>Donec</kbd> porttitor lacus varius, elementum enim eget, vehicula velit. Sed ac tortor venenatis,
+                tincidunt
+                magna et, dapibus lectus. Cras nec tellus leo. Duis tempus molestie facilisis. Aliquam pharetra blandit
+                erat, sed condimentum enim bibendum sed. Suspendisse ante diam, accumsan ac iaculis ac, mollis quis
+                erat. Mauris vitae accumsan lorem, maximus pharetra sem.
+            </p>
+
+            <h2>Heading 2</h2>
+            <p>
+                Quisque in tellus ut arcu tristique scelerisque. Pellentesque velit dui, dictum ac dui ac, luctus
+                sodales tellus. Morbi ac lectus ut massa tristique dictum sed nec ligula. Mauris nec iaculis urna, et
+                dictum nisi. Suspendisse sodales laoreet eleifend. Morbi sem tortor, dictum id dui id, ornare dapibus
+                odio. Pellentesque varius quam ac odio tempus, nec sagittis metus consectetur. Quisque scelerisque
+                pharetra maximus. Proin dignissim scelerisque massa, pharetra bibendum velit tempor vel. Integer felis
+                ante, viverra ac pharetra quis, mattis vitae lectus. Nullam vitae metus ac sapien mattis mollis vitae id
+                est. Cras suscipit consequat ante, vel auctor elit gravida eget. Cras dolor nisi, gravida in porta
+                convallis, convallis eget sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras
+                malesuada massa eget cursus porta.
+            </p>
+        </div>
+    </details>
+
+    <!-- accordeons -->
+    <details>
+        <summary>Accordeons</summary>
+        <div class="p-4 space-y-5">
+            <section class="demo">
+                <header>Default</header>
+                <main>
+                    <details>
+                        <summary>Accordeon</summary>
+                        <main>
+                            <p>Here goes text.</p>
+                        </main>
+                    </details>
+                </main>
+            </section>
+
+            <section class="demo">
+                <header>Stack</header>
+                <main>
+                    <div class="details-stack">
+                        <details>
+                            <summary>First</summary>
+                            <main>
+                                <p>Here goes text.</p>
+                            </main>
+                        </details>
+                        <details>
+                            <summary>Second</summary>
+                            <main>
+                                <p>Here goes text.</p>
+                            </main>
+                        </details>
+                        <details>
+                            <summary>Third</summary>
+                            <main>
+                                <p>Here goes text.</p>
+                            </main>
+                        </details>
+                    </div>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- alerts -->
+    <details>
+        <summary>Alerts</summary>
+        <div class="p-4 space-y-5">
+            <section class="demo">
+                <header>Base</header>
+                <main class="space-y-2">
+                    <div class="alert">This is a base unstyled alert</div>
+                    <div class="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1" />
+                            <path d="M9 12l2 2l4 -4" />
+                        </svg>
+                        This is a base unstyled alert
+                    </div>
+                </main>
+            </section>
+
+            <section class="demo">
+                <header>Filled</header>
+                <main class="space-y-2">
+                    <div class="alert alert-info">This is a <a href="#">primary</a> alert</div>
+                    <div class="alert alert-warning">This is a <a href="#">warning</a> alert</div>
+                    <div class="alert alert-success">This is a <a href="#">success</a> alert</div>
+                    <div class="alert alert-danger">This is a <a href="#">danger</a> alert</div>
+                </main>
+            </section>
+
+            <section class="demo">
+                <header>With extra text</header>
+                <main class="space-y-2">
+                    <div class="alert alert-info">
+                        This is a primary alert
+                        <hr>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+                        cursus ante dapibus diam.
+                    </div>
+                    <div class="alert alert-warning">
+                        This is a warning alert
+                        <hr>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+                        cursus ante dapibus diam.
+                    </div>
+                    <div class="alert alert-success">
+                        This is a success alert
+                        <hr>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+                        cursus ante dapibus diam.
+                    </div>
+                    <div class="alert alert-danger">
+                        This is a danger alert
+                        <hr>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+                        cursus ante dapibus diam.
+                    </div>
+
+                    <div class="alert alert-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                            <path d="M12 9h.01" />
+                            <path d="M11 12h1v4h1" />
+                        </svg>
+                        <div>
+                            This is a danger alert
+                            <hr>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+                            Sed
+                            cursus ante dapibus diam.
+                        </div>
+                    </div>
+                </main>
+            </section>
+
+            <section class="demo">
+                <header>With icons</header>
+                <main class="space-y-2">
+                    <div class="alert alert-info">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                            <path d="M12 9h.01" />
+                            <path d="M11 12h1v4h1" />
+                        </svg>
+                        This is a primary alert
+                    </div>
+                    <div class="alert alert-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
+                            <path d="M12 8v4" />
+                            <path d="M12 16h.01" />
+                        </svg>
+                        This is a warning alert
+                    </div>
+                    <div class="alert alert-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1" />
+                            <path d="M9 12l2 2l4 -4" />
+                        </svg>
+                        This is a success alert
+                    </div>
+                    <div class="alert alert-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                            <path d="M12 8v4" />
+                            <path d="M12 16h.01" />
+                        </svg>
+                        This is a danger alert
+                    </div>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- avatars -->
+    <details>
+        <summary>Avatars</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Circle</span>
+                </header>
+                <main class="flex flex-wrap gap-3">
+                    <div data-initials="JD" class="avatar"></div>
+                    <div data-initials="JD" class="avatar avatar-red"></div>
+                    <div data-initials="JD" class="avatar avatar-orange"></div>
+                    <div data-initials="JD" class="avatar avatar-amber"></div>
+                    <div data-initials="JD" class="avatar avatar-yellow"></div>
+                    <div data-initials="JD" class="avatar avatar-lime"></div>
+                    <div data-initials="JD" class="avatar avatar-green"></div>
+                    <div data-initials="JD" class="avatar avatar-emerald"></div>
+                    <div data-initials="JD" class="avatar avatar-teal"></div>
+                    <div data-initials="JD" class="avatar avatar-cyan"></div>
+                    <div data-initials="JD" class="avatar avatar-sky"></div>
+                    <div data-initials="JD" class="avatar avatar-blue"></div>
+                    <div data-initials="JD" class="avatar avatar-indigo"></div>
+                    <div data-initials="JD" class="avatar avatar-violet"></div>
+                    <div data-initials="JD" class="avatar avatar-purple"></div>
+                    <div data-initials="JD" class="avatar avatar-fuchsia"></div>
+                    <div data-initials="JD" class="avatar avatar-rose"></div>
+                    <div data-initials="JD" class="avatar avatar-pink"></div>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Rounded</span>
+                </header>
+                <main class="flex gap-3">
+                    <div data-initials="JD" class="avatar avatar-rounded"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-red"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-orange"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-amber"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-yellow"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-lime"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-green"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-emerald"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-teal"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-cyan"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-sky"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-blue"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-indigo"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-violet"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-purple"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-fuchsia"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-rose"></div>
+                    <div data-initials="JD" class="avatar avatar-rounded avatar-pink"></div>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Subtle</span>
+                </header>
+                <main class="flex gap-3">
+                    <div data-initials="JD" class="avatar avatar-subtle"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-red"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-orange"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-amber"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-yellow"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-lime"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-green"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-emerald"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-teal"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-cyan"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-sky"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-blue"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-indigo"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-violet"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-purple"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-fuchsia"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-rose"></div>
+                    <div data-initials="JD" class="avatar avatar-subtle avatar-pink"></div>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Sizes</span>
+                </header>
+                <main class="flex gap-3">
+                    <div data-initials="JD" class="avatar avatar-xs"></div>
+                    <div data-initials="JD" class="avatar avatar-sm"></div>
+                    <div data-initials="JD" class="avatar"></div>
+                    <div data-initials="JD" class="avatar avatar-lg"></div>
+                    <div data-initials="JD" class="avatar avatar-xl"></div>
+                    <div data-initials="JD" class="avatar avatar-2xl"></div>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">With image</span>
+                </header>
+                <main class="flex gap-3">
+                    <div class="avatar avatar-xs"><img src="https://avatar.iran.liara.run/public/98"></div>
+                    <div class="avatar avatar-sm"><img src="https://avatar.iran.liara.run/public/98"></div>
+                    <div class="avatar"><img src="https://avatar.iran.liara.run/public/98"></div>
+                    <div class="avatar avatar-lg"><img src="https://avatar.iran.liara.run/public/98"></div>
+                    <div class="avatar avatar-xl"><img src="https://avatar.iran.liara.run/public/98"></div>
+                    <div class="avatar avatar-2xl"><img src="https://avatar.iran.liara.run/public/98"></div>
+                </main>
+                <main class="flex gap-3">
+                    <div class="avatar avatar-rounded avatar-xs"><img src="https://avatar.iran.liara.run/public/98">
+                    </div>
+                    <div class="avatar avatar-rounded avatar-sm"><img src="https://avatar.iran.liara.run/public/98">
+                    </div>
+                    <div class="avatar avatar-rounded"><img src="https://avatar.iran.liara.run/public/98"></div>
+                    <div class="avatar avatar-rounded avatar-lg"><img src="https://avatar.iran.liara.run/public/98">
+                    </div>
+                    <div class="avatar avatar-rounded avatar-xl"><img src="https://avatar.iran.liara.run/public/98">
+                    </div>
+                    <div class="avatar avatar-rounded avatar-2xl"><img src="https://avatar.iran.liara.run/public/98">
+                    </div>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Avatar Group</span>
+                </header>
+                <main class="flex gap-3">
+                    <div class="avatar-group">
+                        <div data-initials="JD" class="avatar"></div>
+                        <div data-initials="JD" class="avatar"></div>
+                        <div data-initials="JD" class="avatar"></div>
+                    </div>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- buttons -->
+    <details>
+        <summary>Buttons</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Unstyled</span>
+                </header>
+                <main>
+                    <button type="button" class="btn">Unstyled</button>
+                </main>
+            </section>
+
+            <section>
+                <header>
+                    <span class="h4">Variants</span>
+                </header>
+                <main>
+                    <button type="button" class="btn">Standard</button>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                    <button type="button" class="btn btn-flat">Text</button>
+                    <button type="button" class="btn btn-link">Link</button>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Icon only</span>
+                </header>
+                <main>
+                    <button type="button" class="btn btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                            <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                            <path d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-icon btn-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                            <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                            <path d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                        </svg>
+                    </button>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Sizes</span>
+                </header>
+                <main>
+                    <button type="button" class="btn btn-sm">Small</button>
+                    <button type="button" class="btn">Default</button>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">States</span>
+                </header>
+                <main>
+                    <button type="button" disabled class="btn">Standard</button>
+                    <button type="button" disabled class="btn btn-primary">Primary</button>
+                    <button type="button" disabled class="btn btn-secondary">Secondary</button>
+                    <button type="button" disabled class="btn btn-danger">Danger</button>
+                    <button type="button" disabled class="btn btn-warning">Warning</button>
+                    <button type="button" disabled class="btn btn-flat">Text</button>
+                    <button type="button" disabled class="btn btn-link">Link</button>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">With icons</span>
+                </header>
+                <main class="space-y-3">
+
+                    <div class="flex items-center gap-2">
+                        <button type="button" class="btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Standard
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Primary
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Secondary
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Danger
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Warning
+                        </button>
+                        <button type="button" class="btn btn-flat">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Text
+                        </button>
+                        <button type="button" class="btn btn-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Link
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button type="button" class="btn">
+                            Standard
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Primary
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                            Secondary
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            Danger
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                            Warning
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                        </button>
+                        <button type="button" class="btn btn-flat">
+                            Text
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                        </button>
+                        <button type="button" class="btn btn-link">
+                            Link
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button type="button" disabled class="btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Left icon
+                        </button>
+                        <button type="button" disabled class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Primary
+                        </button>
+                        <button type="button" disabled class="btn btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Secondary
+                        </button>
+                        <button type="button" disabled class="btn btn-danger">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Danger
+                        </button>
+                        <button type="button" disabled class="btn btn-warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Warning
+                        </button>
+                        <button type="button" disabled class="btn btn-flat">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Text
+                        </button>
+                        <button type="button" disabled class="btn btn-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Link
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button type="button" class="btn btn-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                <path
+                                    d="M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z" />
+                            </svg>
+                            Small
+                        </button>
+                    </div>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Modifiers</span>
+                </header>
+                <main>
+                    <button type="button" class="btn btn-block">Full width</button>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- badges -->
+    <details>
+        <summary>Badges</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <section>
+                    <header>
+                        <span class="h4">Colors</span>
+                    </header>
+                    <main>
+                        <span class="badge badge-accent">Accent</span>
+                        <span class="badge badge-danger">Danger</span>
+                        <span class="badge badge-warning">Warning</span>
+                        <span class="badge badge-success">Success</span>
+                    </main>
+                    <main>
+                        <span class="badge">Default</span>
+                        <span class="badge badge-red">Red</span>
+                        <span class="badge badge-orange">Orange</span>
+                        <span class="badge badge-amber">Amber</span>
+                        <span class="badge badge-yellow">Yellow</span>
+                        <span class="badge badge-lime">Lime</span>
+                        <span class="badge badge-green">Green</span>
+                        <span class="badge badge-emerald">Emerald</span>
+                        <span class="badge badge-teal">Teal</span>
+                        <span class="badge badge-cyan">Cyan</span>
+                        <span class="badge badge-sky">Sky</span>
+                        <span class="badge badge-blue">Blue</span>
+                        <span class="badge badge-indigo">Indigo</span>
+                        <span class="badge badge-violet">Violet</span>
+                        <span class="badge badge-purple">Purple</span>
+                        <span class="badge badge-fuchsia">Fuchsia</span>
+                        <span class="badge badge-rose">Rose</span>
+                        <span class="badge badge-pink">Pink</span>
+                    </main>
+                    <main>
+                        <span class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Default</span>
+                        <span class="badge badge-red"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Red</span>
+                        <span class="badge badge-orange"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Orange</span>
+                        <span class="badge badge-amber"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Amber</span>
+                        <span class="badge badge-yellow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Yellow</span>
+                        <span class="badge badge-lime"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Lime</span>
+                        <span class="badge badge-green"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Green</span>
+                        <span class="badge badge-emerald"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Emerald</span>
+                        <span class="badge badge-teal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Teal</span>
+                        <span class="badge badge-cyan"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Cyan</span>
+                        <span class="badge badge-sky"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Sky</span>
+                        <span class="badge badge-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Blue</span>
+                        <span class="badge badge-indigo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Indigo</span>
+                        <span class="badge badge-violet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Violet</span>
+                        <span class="badge badge-purple"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Purple</span>
+                        <span class="badge badge-fuchsia"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Fuchsia</span>
+                        <span class="badge badge-rose"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Rose</span>
+                        <span class="badge badge-pink"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Pink</span>
+                    </main>
+                </section>
+                <section>
+                    <header>
+                        <span class="h4">Subtle</span>
+                    </header>
+                    <main>
+                        <span class="badge badge-subtle badge-accent">Accent</span>
+                        <span class="badge badge-subtle badge-danger">Danger</span>
+                        <span class="badge badge-subtle badge-warning">Warning</span>
+                        <span class="badge badge-subtle badge-success">Success</span>
+                    </main>
+                    <main>
+                        <span class="badge badge-subtle">Default</span>
+                        <span class="badge badge-subtle badge-red">Red</span>
+                        <span class="badge badge-subtle badge-orange">Orange</span>
+                        <span class="badge badge-subtle badge-amber">Amber</span>
+                        <span class="badge badge-subtle badge-yellow">Yellow</span>
+                        <span class="badge badge-subtle badge-lime">Lime</span>
+                        <span class="badge badge-subtle badge-green">Green</span>
+                        <span class="badge badge-subtle badge-emerald">Emerald</span>
+                        <span class="badge badge-subtle badge-teal">Teal</span>
+                        <span class="badge badge-subtle badge-cyan">Cyan</span>
+                        <span class="badge badge-subtle badge-sky">Sky</span>
+                        <span class="badge badge-subtle badge-blue">Blue</span>
+                        <span class="badge badge-subtle badge-indigo">Indigo</span>
+                        <span class="badge badge-subtle badge-violet">Violet</span>
+                        <span class="badge badge-subtle badge-purple">Purple</span>
+                        <span class="badge badge-subtle badge-fuchsia">Fuchsia</span>
+                        <span class="badge badge-subtle badge-rose">Rose</span>
+                        <span class="badge badge-subtle badge-pink">Pink</span>
+                    </main>
+                    <main>
+                        <span class="badge badge-subtle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Default</span>
+                        <span class="badge badge-subtle badge-red"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Red</span>
+                        <span class="badge badge-subtle badge-orange"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Orange</span>
+                        <span class="badge badge-subtle badge-amber"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Amber</span>
+                        <span class="badge badge-subtle badge-yellow"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Yellow</span>
+                        <span class="badge badge-subtle badge-lime"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Lime</span>
+                        <span class="badge badge-subtle badge-green"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Green</span>
+                        <span class="badge badge-subtle badge-emerald"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Emerald</span>
+                        <span class="badge badge-subtle badge-teal"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Teal</span>
+                        <span class="badge badge-subtle badge-cyan"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Cyan</span>
+                        <span class="badge badge-subtle badge-sky"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Sky</span>
+                        <span class="badge badge-subtle badge-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Blue</span>
+                        <span class="badge badge-subtle badge-indigo"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Indigo</span>
+                        <span class="badge badge-subtle badge-violet"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Violet</span>
+                        <span class="badge badge-subtle badge-purple"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Purple</span>
+                        <span class="badge badge-subtle badge-fuchsia"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Fuchsia</span>
+                        <span class="badge badge-subtle badge-rose"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Rose</span>
+                        <span class="badge badge-subtle badge-pink"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Pink</span>
+                    </main>
+                </section>
+                <section>
+                    <header>
+                        <span class="h4">Outline</span>
+                    </header>
+                    <main>
+                        <span class="badge badge-outline">Default</span>
+                        <span class="badge badge-outline badge-red">Red</span>
+                        <span class="badge badge-outline badge-orange">Orange</span>
+                        <span class="badge badge-outline badge-amber">Amber</span>
+                        <span class="badge badge-outline badge-yellow">Yellow</span>
+                        <span class="badge badge-outline badge-lime">Lime</span>
+                        <span class="badge badge-outline badge-green">Green</span>
+                        <span class="badge badge-outline badge-emerald">Emerald</span>
+                        <span class="badge badge-outline badge-teal">Teal</span>
+                        <span class="badge badge-outline badge-cyan">Cyan</span>
+                        <span class="badge badge-outline badge-sky">Sky</span>
+                        <span class="badge badge-outline badge-blue">Blue</span>
+                        <span class="badge badge-outline badge-indigo">Indigo</span>
+                        <span class="badge badge-outline badge-violet">Violet</span>
+                        <span class="badge badge-outline badge-purple">Purple</span>
+                        <span class="badge badge-outline badge-fuchsia">Fuchsia</span>
+                        <span class="badge badge-outline badge-rose">Rose</span>
+                        <span class="badge badge-outline badge-pink">Pink</span>
+                    </main>
+                    <main>
+                        <span class="badge badge-outline"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Default</span>
+                        <span class="badge badge-outline badge-red"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Red</span>
+                        <span class="badge badge-outline badge-orange"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Orange</span>
+                        <span class="badge badge-outline badge-amber"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Amber</span>
+                        <span class="badge badge-outline badge-yellow"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Yellow</span>
+                        <span class="badge badge-outline badge-lime"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Lime</span>
+                        <span class="badge badge-outline badge-green"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Green</span>
+                        <span class="badge badge-outline badge-emerald"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Emerald</span>
+                        <span class="badge badge-outline badge-teal"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Teal</span>
+                        <span class="badge badge-outline badge-cyan"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Cyan</span>
+                        <span class="badge badge-outline badge-sky"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Sky</span>
+                        <span class="badge badge-outline badge-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Blue</span>
+                        <span class="badge badge-outline badge-indigo"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Indigo</span>
+                        <span class="badge badge-outline badge-violet"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Violet</span>
+                        <span class="badge badge-outline badge-purple"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Purple</span>
+                        <span class="badge badge-outline badge-fuchsia"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Fuchsia</span>
+                        <span class="badge badge-outline badge-rose"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Rose</span>
+                        <span class="badge badge-outline badge-pink"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Pink</span>
+                    </main>
+                </section>
+                <section>
+                    <header>
+                        <span class="h4">Sizes</span>
+                    </header>
+                    <main>
+                        <span class="badge badge-sm ">Default</span>
+                        <span class="badge badge-sm badge-red">Red</span>
+                        <span class="badge badge-sm badge-orange">Orange</span>
+                        <span class="badge badge-sm badge-amber">Amber</span>
+                        <span class="badge badge-sm badge-yellow">Yellow</span>
+                        <span class="badge badge-sm badge-lime">Lime</span>
+                        <span class="badge badge-sm badge-green">Green</span>
+                        <span class="badge badge-sm badge-emerald">Emerald</span>
+                        <span class="badge badge-sm badge-teal">Teal</span>
+                        <span class="badge badge-sm badge-cyan">Cyan</span>
+                        <span class="badge badge-sm badge-sky">Sky</span>
+                        <span class="badge badge-sm badge-blue">Blue</span>
+                        <span class="badge badge-sm badge-indigo">Indigo</span>
+                        <span class="badge badge-sm badge-violet">Violet</span>
+                        <span class="badge badge-sm badge-purple">Purple</span>
+                        <span class="badge badge-sm badge-fuchsia">Fuchsia</span>
+                        <span class="badge badge-sm badge-rose">Rose</span>
+                        <span class="badge badge-sm badge-pink">Pink</span>
+
+                        <span class="badge badge-subtle badge-sm">Default</span>
+                        <span class="badge badge-subtle badge-sm badge-red">Red</span>
+                        <span class="badge badge-subtle badge-sm badge-orange">Orange</span>
+                        <span class="badge badge-subtle badge-sm badge-amber">Amber</span>
+                        <span class="badge badge-subtle badge-sm badge-yellow">Yellow</span>
+                        <span class="badge badge-subtle badge-sm badge-lime">Lime</span>
+                        <span class="badge badge-subtle badge-sm badge-green">Green</span>
+                        <span class="badge badge-subtle badge-sm badge-emerald">Emerald</span>
+                        <span class="badge badge-subtle badge-sm badge-teal">Teal</span>
+                        <span class="badge badge-subtle badge-sm badge-cyan">Cyan</span>
+                        <span class="badge badge-subtle badge-sm badge-sky">Sky</span>
+                        <span class="badge badge-subtle badge-sm badge-blue">Blue</span>
+                        <span class="badge badge-subtle badge-sm badge-indigo">Indigo</span>
+                        <span class="badge badge-subtle badge-sm badge-violet">Violet</span>
+                        <span class="badge badge-subtle badge-sm badge-purple">Purple</span>
+                        <span class="badge badge-subtle badge-sm badge-fuchsia">Fuchsia</span>
+                        <span class="badge badge-subtle badge-sm badge-rose">Rose</span>
+                        <span class="badge badge-subtle badge-sm badge-pink">Pink</span>
+
+                        <span class="badge badge-outline badge-sm">Default</span>
+                        <span class="badge badge-outline badge-sm badge-red">Red</span>
+                        <span class="badge badge-outline badge-sm badge-orange">Orange</span>
+                        <span class="badge badge-outline badge-sm badge-amber">Amber</span>
+                        <span class="badge badge-outline badge-sm badge-yellow">Yellow</span>
+                        <span class="badge badge-outline badge-sm badge-lime">Lime</span>
+                        <span class="badge badge-outline badge-sm badge-green">Green</span>
+                        <span class="badge badge-outline badge-sm badge-emerald">Emerald</span>
+                        <span class="badge badge-outline badge-sm badge-teal">Teal</span>
+                        <span class="badge badge-outline badge-sm badge-cyan">Cyan</span>
+                        <span class="badge badge-outline badge-sm badge-sky">Sky</span>
+                        <span class="badge badge-outline badge-sm badge-blue">Blue</span>
+                        <span class="badge badge-outline badge-sm badge-indigo">Indigo</span>
+                        <span class="badge badge-outline badge-sm badge-violet">Violet</span>
+                        <span class="badge badge-outline badge-sm badge-purple">Purple</span>
+                        <span class="badge badge-outline badge-sm badge-fuchsia">Fuchsia</span>
+                        <span class="badge badge-outline badge-sm badge-rose">Rose</span>
+                        <span class="badge badge-outline badge-sm badge-pink">Pink</span>
+                    </main>
+                    <main>
+                        <span class="badge badge-lg ">Default</span>
+                        <span class="badge badge-lg badge-red">Red</span>
+                        <span class="badge badge-lg badge-orange">Orange</span>
+                        <span class="badge badge-lg badge-amber">Amber</span>
+                        <span class="badge badge-lg badge-yellow">Yellow</span>
+                        <span class="badge badge-lg badge-lime">Lime</span>
+                        <span class="badge badge-lg badge-green">Green</span>
+                        <span class="badge badge-lg badge-emerald">Emerald</span>
+                        <span class="badge badge-lg badge-teal">Teal</span>
+                        <span class="badge badge-lg badge-cyan">Cyan</span>
+                        <span class="badge badge-lg badge-sky">Sky</span>
+                        <span class="badge badge-lg badge-blue">Blue</span>
+                        <span class="badge badge-lg badge-indigo">Indigo</span>
+                        <span class="badge badge-lg badge-violet">Violet</span>
+                        <span class="badge badge-lg badge-purple">Purple</span>
+                        <span class="badge badge-lg badge-fuchsia">Fuchsia</span>
+                        <span class="badge badge-lg badge-rose">Rose</span>
+                        <span class="badge badge-lg badge-pink">Pink</span>
+
+                        <span class="badge badge-subtle badge-lg">Default</span>
+                        <span class="badge badge-subtle badge-lg badge-red">Red</span>
+                        <span class="badge badge-subtle badge-lg badge-orange">Orange</span>
+                        <span class="badge badge-subtle badge-lg badge-amber">Amber</span>
+                        <span class="badge badge-subtle badge-lg badge-yellow">Yellow</span>
+                        <span class="badge badge-subtle badge-lg badge-lime">Lime</span>
+                        <span class="badge badge-subtle badge-lg badge-green">Green</span>
+                        <span class="badge badge-subtle badge-lg badge-emerald">Emerald</span>
+                        <span class="badge badge-subtle badge-lg badge-teal">Teal</span>
+                        <span class="badge badge-subtle badge-lg badge-cyan">Cyan</span>
+                        <span class="badge badge-subtle badge-lg badge-sky">Sky</span>
+                        <span class="badge badge-subtle badge-lg badge-blue">Blue</span>
+                        <span class="badge badge-subtle badge-lg badge-indigo">Indigo</span>
+                        <span class="badge badge-subtle badge-lg badge-violet">Violet</span>
+                        <span class="badge badge-subtle badge-lg badge-purple">Purple</span>
+                        <span class="badge badge-subtle badge-lg badge-fuchsia">Fuchsia</span>
+                        <span class="badge badge-subtle badge-lg badge-rose">Rose</span>
+                        <span class="badge badge-subtle badge-lg badge-pink">Pink</span>
+
+                        <span class="badge badge-outline badge-lg">Default</span>
+                        <span class="badge badge-outline badge-lg badge-red">Red</span>
+                        <span class="badge badge-outline badge-lg badge-orange">Orange</span>
+                        <span class="badge badge-outline badge-lg badge-amber">Amber</span>
+                        <span class="badge badge-outline badge-lg badge-yellow">Yellow</span>
+                        <span class="badge badge-outline badge-lg badge-lime">Lime</span>
+                        <span class="badge badge-outline badge-lg badge-green">Green</span>
+                        <span class="badge badge-outline badge-lg badge-emerald">Emerald</span>
+                        <span class="badge badge-outline badge-lg badge-teal">Teal</span>
+                        <span class="badge badge-outline badge-lg badge-cyan">Cyan</span>
+                        <span class="badge badge-outline badge-lg badge-sky">Sky</span>
+                        <span class="badge badge-outline badge-lg badge-blue">Blue</span>
+                        <span class="badge badge-outline badge-lg badge-indigo">Indigo</span>
+                        <span class="badge badge-outline badge-lg badge-violet">Violet</span>
+                        <span class="badge badge-outline badge-lg badge-purple">Purple</span>
+                        <span class="badge badge-outline badge-lg badge-fuchsia">Fuchsia</span>
+                        <span class="badge badge-outline badge-lg badge-rose">Rose</span>
+                        <span class="badge badge-outline badge-lg badge-pink">Pink</span>
+                    </main>
+                    <main>
+                        <span class="badge badge-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-red"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-yellow"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-green"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-teal"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-violet"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-rose"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-pink"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-amber"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-lime"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-emerald"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-indigo"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+
+                        <span class="badge badge-lg badge-subtle"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-red"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-yellow"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-green"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-blue"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-teal"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-violet"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-rose"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-pink"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-amber"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-lime"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-emerald"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-subtle badge-indigo"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+
+                        <span class="badge badge-lg badge-outline"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-red"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-yellow"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-green"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-blue"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-teal"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-violet"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-rose"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-pink"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-amber"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-lime"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-emerald"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                        <span class="badge badge-lg badge-outline badge-indigo"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-badge">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+                            </svg>Badge</span>
+                    </main>
+                </section>
+        </div>
+    </details>
+
+    <!-- breadcrumbs -->
+    <details>
+        <summary>Breadcrumbs</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>Breadcrumbs</header>
+                <main>
+                    <nav class="breadcrumbs">
+                        <a href="#">Home</a>
+                        <a href="#">Users</a>
+                        <a href="#" aria-current="page">View</a>
+                    </nav>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- callouts -->
+    <details>
+        <summary>Callouts</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>Default</header>
+                <main>
+                    <section class="callout">
+                        <div class="callout-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-ad">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                                <path d="M7 15v-4a2 2 0 0 1 4 0v4" />
+                                <path d="M7 13l4 0" />
+                                <path d="M17 9v6h-1.5a1.5 1.5 0 1 1 1.5 -1.5" />
+                            </svg>
+                        </div>
+                        <div class="callout-body">
+                            <header class="callout-header">Callout</header>
+                            <main class="callout-content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </main>
+                            <main class="callout-actions">
+                                <button class="btn btn-accent" type="button">Action</button>
+                                <button class="btn" type="button">Another Action</button>
+                            </main>
+                        </div>
+                    </section>
+                </main>
+            </section>
+            <section>
+                <header>Accent</header>
+                <main>
+                    <section class="callout callout-accent">
+                        <div class="callout-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-ad">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                                <path d="M7 15v-4a2 2 0 0 1 4 0v4" />
+                                <path d="M7 13l4 0" />
+                                <path d="M17 9v6h-1.5a1.5 1.5 0 1 1 1.5 -1.5" />
+                            </svg>
+                        </div>
+                        <div class="callout-body">
+                            <header class="callout-heading">Callout</header>
+                            <main class="callout-content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </main>
+                            <main class="callout-actions">
+                                <button class="btn btn-accent" type="button">Action</button>
+                                <button class="btn" type="button">Another Action</button>
+                            </main>
+                        </div>
+                    </section>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- close -->
+    <details>
+        <summary>Close button</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Default</span>
+                </header>
+                <main>
+                    <button type="button" class="btn-close"></button>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Disabled</span>
+                </header>
+                <main>
+                    <button type="button" disabled class="btn-close"></button>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- counters -->
+    <details>
+        <summary>Counters</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Filled</span>
+                </header>
+                <main>
+                    <span class="counter">42</span>
+                    <span class="counter counter-red">42</span>
+                    <span class="counter counter-orange">42</span>
+                    <span class="counter counter-amber">42</span>
+                    <span class="counter counter-yellow">42</span>
+                    <span class="counter counter-lime">42</span>
+                    <span class="counter counter-green">42</span>
+                    <span class="counter counter-emerald">42</span>
+                    <span class="counter counter-teal">42</span>
+                    <span class="counter counter-cyan">42</span>
+                    <span class="counter counter-sky">42</span>
+                    <span class="counter counter-blue">42</span>
+                    <span class="counter counter-indigo">42</span>
+                    <span class="counter counter-violet">42</span>
+                    <span class="counter counter-purple">42</span>
+                    <span class="counter counter-fuchsia">42</span>
+                    <span class="counter counter-rose">42</span>
+                    <span class="counter counter-pink">42</span>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Subtle</span>
+                </header>
+                <main>
+                    <span class="counter counter-subtle">42</span>
+                    <span class="counter counter-subtle counter-red">42</span>
+                    <span class="counter counter-subtle counter-orange">42</span>
+                    <span class="counter counter-subtle counter-amber">42</span>
+                    <span class="counter counter-subtle counter-yellow">42</span>
+                    <span class="counter counter-subtle counter-lime">42</span>
+                    <span class="counter counter-subtle counter-green">42</span>
+                    <span class="counter counter-subtle counter-emerald">42</span>
+                    <span class="counter counter-subtle counter-teal">42</span>
+                    <span class="counter counter-subtle counter-cyan">42</span>
+                    <span class="counter counter-subtle counter-sky">42</span>
+                    <span class="counter counter-subtle counter-blue">42</span>
+                    <span class="counter counter-subtle counter-indigo">42</span>
+                    <span class="counter counter-subtle counter-violet">42</span>
+                    <span class="counter counter-subtle counter-purple">42</span>
+                    <span class="counter counter-subtle counter-fuchsia">42</span>
+                    <span class="counter counter-subtle counter-rose">42</span>
+                    <span class="counter counter-subtle counter-pink">42</span>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Outline</span>
+                </header>
+                <main>
+                    <span class="counter counter-outline">42</span>
+                    <span class="counter counter-outline counter-red">42</span>
+                    <span class="counter counter-outline counter-orange">42</span>
+                    <span class="counter counter-outline counter-amber">42</span>
+                    <span class="counter counter-outline counter-yellow">42</span>
+                    <span class="counter counter-outline counter-lime">42</span>
+                    <span class="counter counter-outline counter-green">42</span>
+                    <span class="counter counter-outline counter-emerald">42</span>
+                    <span class="counter counter-outline counter-teal">42</span>
+                    <span class="counter counter-outline counter-cyan">42</span>
+                    <span class="counter counter-outline counter-sky">42</span>
+                    <span class="counter counter-outline counter-blue">42</span>
+                    <span class="counter counter-outline counter-indigo">42</span>
+                    <span class="counter counter-outline counter-violet">42</span>
+                    <span class="counter counter-outline counter-purple">42</span>
+                    <span class="counter counter-outline counter-fuchsia">42</span>
+                    <span class="counter counter-outline counter-rose">42</span>
+                    <span class="counter counter-outline counter-pink">42</span>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Large</span>
+                </header>
+                <main>
+                    <span class="counter counter-lg">42</span>
+                    <span class="counter counter-lg counter-red">42</span>
+                    <span class="counter counter-lg counter-orange">42</span>
+                    <span class="counter counter-lg counter-amber">42</span>
+                    <span class="counter counter-lg counter-yellow">42</span>
+                    <span class="counter counter-lg counter-lime">42</span>
+                    <span class="counter counter-lg counter-green">42</span>
+                    <span class="counter counter-lg counter-emerald">42</span>
+                    <span class="counter counter-lg counter-teal">42</span>
+                    <span class="counter counter-lg counter-cyan">42</span>
+                    <span class="counter counter-lg counter-sky">42</span>
+                    <span class="counter counter-lg counter-blue">42</span>
+                    <span class="counter counter-lg counter-indigo">42</span>
+                    <span class="counter counter-lg counter-violet">42</span>
+                    <span class="counter counter-lg counter-purple">42</span>
+                    <span class="counter counter-lg counter-fuchsia">42</span>
+                    <span class="counter counter-lg counter-rose">42</span>
+                    <span class="counter counter-lg counter-pink">42</span>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <script>
+        function openModal(selector) {
+            document.querySelector(selector).classList.add('open');
+        }
+
+        function closeModal(selector) {
+            document.querySelector(selector).classList.remove('open');
+        }
+    </script>
+
+    <!-- dialogs -->
+    <details>
+        <summary>Dialogs</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Default</span>
+                </header>
+                <main>
+                    <button class="btn" onclick="openModal('#modal-sm')">Open (small)</button>
+                    <button class="btn" onclick="openModal('#modal-default')">Open</button>
+                    <button class="btn" onclick="openModal('#modal-lg')">Open (large)</button>
+                    <button class="btn" onclick="openModal('#modal-xl')">Open (xlarge)</button>
+
+                    <section class="modal-container" id="modal-default">
+                        <div class="modal">
+                            <header>
+                                <h1>Modal dialog</h1>
+                                <button class="btn-close" onclick="closeModal('#modal-default')"></button>
+                            </header>
+                            <main>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </main>
+                            <footer>
+                                <button class="btn btn-accent">Action</button>
+                                <button class="btn btn-text" onclick="closeModal('#modal-default')">Close</button>
+                            </footer>
+                        </div>
+                    </section>
+                    <section class="modal-container" id="modal-sm">
+                        <div class="modal modal-sm">
+                            <header>
+                                <h1>Modal dialog</h1>
+                                <button class="btn-close" onclick="closeModal('#modal-sm')"></button>
+                            </header>
+                            <main>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </main>
+                            <footer>
+                                <button class="btn btn-accent">Action</button>
+                                <button class="btn btn-text" onclick="closeModal('#modal-sm')">Close</button>
+                            </footer>
+                        </div>
+                    </section>
+                    <section class="modal-container" id="modal-lg">
+                        <div class="modal modal-lg">
+                            <header>
+                                <h1>Modal dialog</h1>
+                                <button class="btn-close" onclick="closeModal('#modal-lg')"></button>
+                            </header>
+                            <main>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </main>
+                            <footer>
+                                <button class="btn btn-accent">Action</button>
+                                <button class="btn btn-text" onclick="closeModal('#modal-lg')">Close</button>
+                            </footer>
+                        </div>
+                    </section>
+                    <section class="modal-container" id="modal-xl">
+                        <div class="modal modal-xl">
+                            <header>
+                                <h1>Modal dialog</h1>
+                                <button class="btn-close" onclick="closeModal('#modal-xl')"></button>
+                            </header>
+                            <main>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </main>
+                            <footer>
+                                <button class="btn btn-accent">Action</button>
+                                <button class="btn btn-text" onclick="closeModal('#modal-xl')">Close</button>
+                            </footer>
+                        </div>
+                    </section>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- dividers -->
+    <details>
+        <summary>Dividers</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Default</span>
+                </header>
+                <main>
+                    <div class="divider"></div>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">With text</span>
+                </header>
+                <main>
+                    <div class="divider">With Text</div>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- list-menu -->
+    <details>
+        <summary>Menu</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Default</span>
+                </header>
+                <main>
+                    <div class="list-menu w-72">
+                        <span class="list-menu-heading">Heading</span>
+                        <a href="#" class="list-menu-item">Link</a>
+                        <a href="#" class="list-menu-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                <path d="M3 6l0 13" />
+                                <path d="M12 6l0 13" />
+                                <path d="M21 6l0 13" />
+                            </svg>
+                            With Left Icon
+                        </a>
+                        <a href="#">
+                            With Right Icon
+                            <svg class="ml-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-book">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                <path d="M3 6l0 13" />
+                                <path d="M12 6l0 13" />
+                                <path d="M21 6l0 13" />
+                            </svg>
+                        </a>
+                        <a href="#" class="list-menu-item">Link with class</a>
+                        <button type="button" class="list-menu-item">Button</button>
+                        <button type="button" disabled>Disabled Button</button>
+                        <button type="button" disabled>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-book">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                <path d="M3 6l0 13" />
+                                <path d="M12 6l0 13" />
+                                <path d="M21 6l0 13" />
+                            </svg>
+                            Disabled with icon
+                        </button>
+                        <a href="#" class="disabled">Disabled link</a>
+                        <span class="divider"></span>
+                        <a href="#" class="list-menu-item">Settings</a>
+                        <a href="#" class="selected">Selected</a>
+                        <a href="#" class="danger">Danger</a>
+                        <button type="button" class="danger">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-book">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                <path d="M3 6l0 13" />
+                                <path d="M12 6l0 13" />
+                                <path d="M21 6l0 13" />
+                            </svg>
+                            Danger with icon
+                        </button>
+                    </div>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Dropdown</span>
+                </header>
+                <main>
+                    <button onclick="openModal('#dropdown')" class="btn">Open</button>
+                    <div id="dropdown" class="dropdown">
+                        <div class="list-menu">
+                            <button>Item One</button>
+                            <button>Item Two</button>
+                            <button onclick="closeModal('#dropdown')">Close</button>
+                        </div>
+                    </div>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- notifications -->
+    <details>
+        <summary>Notifications</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Base</span>
+                </header>
+                <main>
+                    <div class="notification open notification-static">
+                        <header>
+                            Attention required.
+                        </header>
+                        <button class="btn-close" onclick="closeModal('#notification')"></button>
+                        <main>The copy operation has completed.</main>
+                        <footer>
+                            <button class="btn btn-accent btn-sm">View</button>
+                        </footer>
+                    </div>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">With icon</span>
+                </header>
+                <main>
+                    <div class="notification open notification-static">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 13m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                            <path d="M7 4l-2.75 2" />
+                            <path d="M17 4l2.75 2" />
+                            <path d="M10 13h4" />
+                            <path d="M12 11v4" />
+                        </svg>
+                        <header>
+                            Attention required.
+                        </header>
+                        <button class="btn-close" onclick="closeModal('#notification')"></button>
+
+                        <main>The copy operation has completed.</main>
+                        <footer>
+                            <button class="btn btn-accent btn-sm">View</button>
+                        </footer>
+                    </div>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Dynamic</span>
+                </header>
+                <main>
+                    <button class="btn" onclick="openModal('#notification')">Open</button>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- forms -->
+    <details>
+        <summary>Forms</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Inputs</span>
+                </header>
+                <main>
+                    <input type="text">
+                    <input type="text" disabled value="Disabled">
+                    <input type="text" readonly value="Readonly">
+                    <input type="text" placeholder="Placeholder">
+                    <input type="number">
+                    <input type="color">
+                    <input type="date">
+                    <input type="datetime-local">
+                    <input type="email">
+                    <input type="week">
+                    <input type="file">
+                    <input type="month">
+                    <input type="password">
+                    <input type="search">
+                    <input type="tel">
+                    <input type="time">
+                    <input type="url">
+                    <input type="month">
+                </main>
+                <main class="flex items-center gap-2">
+                    <input type="checkbox">
+                    <input type="checkbox" disabled>
+                    <input type="checkbox" readonly>
+
+                    <input type="checkbox" checked>
+                    <input type="checkbox" checked disabled>
+                </main>
+                <main class="flex items-center gap-2">
+                    <input type="radio">
+                    <input type="radio" disabled>
+                    <input type="radio" readonly>
+
+                    <input type="radio" checked>
+                    <input type="radio" checked disabled>
+                </main>
+                <main class="flex items-center gap-2">
+                    <input type="range">
+                </main>
+                <main class="flex items-center gap-2">
+                    <input type="checkbox" class="form-switch">
+                    <input type="checkbox" checked class="form-switch">
+                    <input type="checkbox" disabled class="form-switch">
+                    <input type="checkbox" disabled checked class="form-switch">
+                </main>
+                <main>
+                    <select>
+                        <option disabled>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </main>
+                <main>
+                    <textarea></textarea>
+                </main>
+                <main class="flex items-center gap-1">
+                    <input type="text">
+                    <button class="btn">Submit </button>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Inputs</span>
+                </header>
+                <main>
+                    <div class="form-group">
+                        <label for="input">Input</label>
+                        <input type="text" id="input">
+                        <div class="form-help">This is a help message.</div>
+                        <div class="form-errors">This is a error message.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input2">
+                            <input type="checkbox" id="input2">
+                            Input
+                        </label>
+                        <div class="form-help">This is a help message.</div>
+                        <div class="form-errors">This is a error message.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input3">
+                            <input type="radio" id="input3">
+                            Input
+                        </label>
+                        <label for="input4">
+                            <input type="radio" id="input4">
+                            Input
+                        </label>
+                        <div class="form-help">This is a help message.</div>
+                        <div class="form-errors">This is a error message.</div>
+                    </div>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Fieldset</span>
+                </header>
+                <main>
+                    <div class="form-fieldset">
+                        <div class="form-group">
+                            <label>Input</label>
+                            <input type="text" id="input">
+                        </div>
+                        <div class="form-group">
+                            <label>Input</label>
+                            <input type="text" id="input">
+                        </div>
+                    </div>
+                    <hr>
+                    <form>
+                        <div class="form-group">
+                            <label>Input</label>
+                            <input type="text" id="input">
+                        </div>
+                        <div class="form-group">
+                            <label>Input</label>
+                            <input type="text" id="input">
+                        </div>
+                    </form>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Input group</span>
+                </header>
+                <main>
+                    <div class="input-group">
+                        <input type="text" id="input">
+                        <button type="button" class="btn">Button</button>
+                    </div>
+                    <div class="input-group">
+                        <select></select>
+                        <button type="button" class="btn">Button</button>
+                    </div>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- status -->
+    <details>
+        <summary>Status</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Dots</span>
+                </header>
+                <main>
+                    <span class="dot"></span>
+                    <span class="dot dot-accent"></span>
+                    <span class="dot dot-success"></span>
+                    <span class="dot dot-warning"></span>
+                    <span class="dot dot-danger"></span>
+
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-orange"></span>
+                    <span class="dot dot-amber"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-lime"></span>
+                    <span class="dot dot-green"></span>
+                    <span class="dot dot-emerald"></span>
+                    <span class="dot dot-teal"></span>
+                    <span class="dot dot-cyan"></span>
+                    <span class="dot dot-sky"></span>
+                    <span class="dot dot-blue"></span>
+                    <span class="dot dot-indigo"></span>
+                    <span class="dot dot-violet"></span>
+                    <span class="dot dot-purple"></span>
+                    <span class="dot dot-fuchsia"></span>
+                    <span class="dot dot-rose"></span>
+                    <span class="dot dot-pink"></span>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Status</span>
+                </header>
+                <main class="space-x-4">
+                    <span class="status"><span class="dot"></span> Active</span>
+                    <span class="status"><span class="dot dot-accent"></span> Active</span>
+                    <span class="status"><span class="dot dot-success"></span> Active</span>
+                    <span class="status"><span class="dot dot-warning"></span> Active</span>
+                    <span class="status"><span class="dot dot-danger"></span> Active</span>
+                    <span class="status"><span class="dot dot-red"></span> Active</span>
+                    <span class="status"><span class="dot dot-orange"></span> Active</span>
+                    <span class="status"><span class="dot dot-amber"></span> Active</span>
+                    <span class="status"><span class="dot dot-yellow"></span> Active</span>
+                    <span class="status"><span class="dot dot-lime"></span> Active</span>
+                    <span class="status"><span class="dot dot-green"></span> Active</span>
+                    <span class="status"><span class="dot dot-emerald"></span> Active</span>
+                    <span class="status"><span class="dot dot-teal"></span> Active</span>
+                    <span class="status"><span class="dot dot-cyan"></span> Active</span>
+                    <span class="status"><span class="dot dot-sky"></span> Active</span>
+                    <span class="status"><span class="dot dot-blue"></span> Active</span>
+                    <span class="status"><span class="dot dot-indigo"></span> Active</span>
+                    <span class="status"><span class="dot dot-violet"></span> Active</span>
+                    <span class="status"><span class="dot dot-purple"></span> Active</span>
+                    <span class="status"><span class="dot dot-fuchsia"></span> Active</span>
+                    <span class="status"><span class="dot dot-rose"></span> Active</span>
+                    <span class="status"><span class="dot dot-pink"></span> Active</span>
+                </main>
+                <main class="space-x-4">
+                    <span class="status status-outline"><span class="dot"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-accent"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-success"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-warning"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-danger"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-red"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-orange"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-amber"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-yellow"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-lime"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-green"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-emerald"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-teal"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-cyan"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-sky"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-blue"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-indigo"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-violet"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-purple"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-fuchsia"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-rose"></span> Active</span>
+                    <span class="status status-outline"><span class="dot dot-pink"></span> Active</span>
+                </main>
+            </section>
+            <section>
+                <header>
+                    <span class="h4">Small size</span>
+                </header>
+                <main>
+                    <span class="dot dot-sm"></span>
+                    <span class="dot dot-sm dot-accent"></span>
+                    <span class="dot dot-sm dot-success"></span>
+                    <span class="dot dot-sm dot-warning"></span>
+                    <span class="dot dot-sm dot-danger"></span>
+
+                    <span class="dot dot-sm dot-red"></span>
+                    <span class="dot dot-sm dot-yellow"></span>
+                    <span class="dot dot-sm dot-green"></span>
+                    <span class="dot dot-sm dot-blue"></span>
+                    <span class="dot dot-sm dot-teal"></span>
+                    <span class="dot dot-sm dot-violet"></span>
+                    <span class="dot dot-sm dot-rose"></span>
+                    <span class="dot dot-sm dot-pink"></span>
+                    <span class="dot dot-sm dot-amber"></span>
+                    <span class="dot dot-sm dot-lime"></span>
+                    <span class="dot dot-sm dot-emerald"></span>
+                    <span class="dot dot-sm dot-indigo"></span>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- pagination -->
+    <details>
+        <summary>Pagination</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Default</span>
+                </header>
+                <main>
+                    <section class="pagination" aria-label="Pagination">
+                        <div class="pagination-info">Showing 1-10 of 20</div>
+                        <nav class="pagination-nav" role="navigation">
+                            <a href="#" class="btn btn-flat" disabled aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M5 12l14 0" />
+                                    <path d="M5 12l4 4" />
+                                    <path d="M5 12l4 -4" />
+                                </svg>
+                                Previous
+                            </a>
+                            <a href="#" class="btn btn-flat" aria-label="Go to page 1">1</a>
+                            <a href="#" class="btn btn-flat selected" selected aria-selected="true"
+                                aria-label="Go to page 2">2</a>
+                            <a href="#" class="btn btn-flat" aria-label="Go to page 2">3</a>
+                            <button class="btn btn-flat" disabled>...</button>
+                            <a href="#" class="btn btn-flat" aria-label="Go to page 4">4</a>
+                            <a href="#" class="btn btn-flat" aria-label="Go to page 5">5</a>
+                            <a href="#" class="btn btn-flat" aria-label="Next">
+                                Next
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M5 12l14 0" />
+                                    <path d="M15 16l4 -4" />
+                                    <path d="M15 8l4 4" />
+                                </svg>
+                            </a>
+                        </nav>
+                    </section>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- progress -->
+    <details>
+        <summary>Progress</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>
+                    <span class="h4">Default</span>
+                </header>
+                <main>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                </main>
+            </section>
+
+            <section>
+                <header>
+                    <span class="h4">Indeterminate</span>
+                </header>
+                <main>
+                    <div class="progress progress-indeterminate">
+                        <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                </main>
+            </section>
+
+            <section>
+                <header>
+                    <span class="h4">Variants</span>
+                </header>
+                <main>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                    <div class="progress progress-success">
+                        <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                    <div class="progress progress-warning">
+                        <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                    <div class="progress progress-danger">
+                        <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                </main>
+            </section>
+
+            <section>
+                <header>
+                    <span class="h4">Sizes</span>
+                </header>
+                <main>
+                    <div class="progress progress-sm">
+                        <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                    <div class="progress progress-lg">
+                        <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- tables -->
+    <details>
+        <summary>Tables</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>Default</header>
+                <main>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                                <th>Header 3</th>
+                                <th>Header 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr class="selected">
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </main>
+            </section>
+            <section>
+                <header>Striped</header>
+                <main>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                                <th>Header 3</th>
+                                <th>Header 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </main>
+            </section>
+            <section>
+                <header>Hover</header>
+                <main>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                                <th>Header 3</th>
+                                <th>Header 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </main>
+            </section>
+            <section>
+                <header>Bordered</header>
+                <main>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                                <th>Header 3</th>
+                                <th>Header 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </main>
+            </section>
+            <section>
+                <header>Borderless</header>
+                <main>
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                                <th>Header 3</th>
+                                <th>Header 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </main>
+            </section>
+            <section>
+                <header>Compact</header>
+                <main>
+                    <table class="table table-compact">
+                        <thead>
+                            <tr>
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                                <th>Header 3</th>
+                                <th>Header 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- tabs -->
+    <details>
+        <summary>Tabs</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>Default</header>
+                <main>
+                    <nav class="tabs">
+                        <button type="button">Tab 1</button>
+                        <button type="button" aria-current="page">Tab 2</button>
+                        <button type="button">Tab 3</button>
+                        <button type="button" aria-disabled="true">Tab 4</button>
+                    </nav>
+                </main>
+            </section>
+            <section>
+                <header>Underline</header>
+                <main>
+                    <nav class="tabs tabs-underline">
+                        <button type="button" class="tab">Tab 1</button>
+                        <button type="button" class="tab selected">Tab 2</button>
+                        <button type="button" class="tab">Tab 3</button>
+                        <button type="button" class="tab" aria-disabled="true">Tab 4</button>
+                    </nav>
+                </main>
+            </section>
+            <section>
+                <header>Pills</header>
+                <main>
+                    <nav class="tabs tabs-pills">
+                        <button type="button" class="tab">Tab 1</button>
+                        <button type="button" class="tab selected">Tab 2</button>
+                        <button type="button" class="tab">Tab 3</button>
+                        <button type="button" class="tab" aria-disabled="true">Tab 4</button>
+                    </nav>
+                </main>
+            </section>
+            <section>
+                <header>Filled</header>
+                <main>
+                    <nav class="tabs tabs-filled">
+                        <button type="button" class="tab">Tab 1</button>
+                        <button type="button" class="tab selected">Tab 2</button>
+                        <button type="button" class="tab">Tab 3</button>
+                        <button type="button" class="tab" aria-disabled="true">Tab 4</button>
+                    </nav>
+                </main>
+            </section>
+            <section>
+                <header>Outline</header>
+                <main>
+                    <nav class="tabs tabs-outline">
+                        <button type="button" class="tab">Tab 1</button>
+                        <button type="button" class="tab selected">Tab 2</button>
+                        <button type="button" class="tab">Tab 3</button>
+                        <button type="button" class="tab" aria-disabled="true">Tab 4</button>
+                    </nav>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <!-- toasts -->
+    <details>
+        <summary>Toasts</summary>
+        <div class="p-4 space-y-5">
+            <section>
+                <header>Default</header>
+                <main>
+                    <div class="toast">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 13m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                            <path d="M7 4l-2.75 2" />
+                            <path d="M17 4l2.75 2" />
+                            <path d="M10 13h4" />
+                            <path d="M12 11v4" />
+                        </svg>
+                        This is a toast message.
+                        <button class="btn btn-sm btn-secondary ml-auto">Action</button>
+                        <button class="btn-close"></button>
+                    </div>
+                </main>
+                <main>
+                    <div class="toast toast-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 13m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                            <path d="M7 4l-2.75 2" />
+                            <path d="M17 4l2.75 2" />
+                            <path d="M10 13h4" />
+                            <path d="M12 11v4" />
+                        </svg>
+                        This is a toast message.
+                        <button class="btn btn-sm btn-secondary ml-auto">Action</button>
+                        <button class="btn-close"></button>
+                    </div>
+                </main>
+                <main>
+                    <div class="toast toast-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 13m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                            <path d="M7 4l-2.75 2" />
+                            <path d="M17 4l2.75 2" />
+                            <path d="M10 13h4" />
+                            <path d="M12 11v4" />
+                        </svg>
+                        This is a toast message.
+                        <button class="btn btn-sm btn-secondary ml-auto">Action</button>
+                        <button class="btn-close"></button>
+                    </div>
+                </main>
+                <main>
+                    <div class="toast toast-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 13m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                            <path d="M7 4l-2.75 2" />
+                            <path d="M17 4l2.75 2" />
+                            <path d="M10 13h4" />
+                            <path d="M12 11v4" />
+                        </svg>
+                        This is a toast message.
+                        <button class="btn btn-sm btn-secondary ml-auto">Action</button>
+                        <button class="btn-close"></button>
+                    </div>
+                </main>
+                <main>
+                    <div class="toast toast-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 13m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                            <path d="M7 4l-2.75 2" />
+                            <path d="M17 4l2.75 2" />
+                            <path d="M10 13h4" />
+                            <path d="M12 11v4" />
+                        </svg>
+                        This is a toast message.
+                        <button class="btn btn-sm btn-secondary ml-auto">Action</button>
+                        <button class="btn-close"></button>
+                    </div>
+                </main>
+            </section>
+        </div>
+    </details>
+
+    <div class="notification" id="notification">
+        <header>
+            Attention required.
+        </header>
+        <button class="btn-close" onclick="closeModal('#notification')"></button>
+        <main>The copy operation has completed.</main>
+        <footer>
+            <button class="btn btn-accent btn-sm">View</button>
+        </footer>
+    </div>
+
+</body>
+
+</html>

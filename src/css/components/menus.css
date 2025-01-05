@@ -1,0 +1,109 @@
+@layer theme {
+    :root {
+        --ax-menu-gap: 0;
+        --ax-menu-display: block;
+
+        --ax-menu-item-radius: var(--radius-md);
+        --ax-menu-item-padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+        --ax-menu-item-gap: calc(var(--spacing) * 2);
+        --ax-menu-item-line-height: calc(var(--spacing) * 6);
+        --ax-menu-item-text: var(--text-color-text);
+        --ax-menu-item-text-disabled: var(--text-color-secondary);
+        --ax-menu-item-bg: var(--background-color-transparent);
+        --ax-menu-item-bg-hover: var(--background-color-transparent-hover);
+        --ax-menu-item-bg-active: var(--background-color-transparent-active);
+        --ax-menu-item-text-selected: var(--text-color-onselected);
+        --ax-menu-item-bg-selected: var(--background-color-selected);
+        --ax-menu-item-display: flex;
+        --ax-menu-item-width: 100%;
+
+        --ax-menu-heading-text: var(--text-color-secondary);
+        --ax-menu-heading-font-size: var(--text-xs);
+
+        --ax-menu-item-icon-height: calc(var(--spacing) * 6);
+        --ax-menu-item-icon-color: var(--color-mono-400);
+        --ax-menu-item-icon-display: block;
+    }
+}
+
+@layer components {
+    .list-menu {
+        display: var(--ax-menu-display);
+        gap: var(--ax-menu-gap);
+    }
+
+    .list-menu>button,
+    .list-menu>a,
+    .list-menu>span {
+        display: var(--ax-menu-item-display);
+        padding: var(--ax-menu-item-padding);
+        align-items: center;
+        justify-content: start;
+        align-self: stretch;
+        width: var(--ax-menu-item-width);
+        color: var(--ax-menu-item-text);
+        line-height: var(--ax-menu-item-line-height);
+        border-radius: var(--ax-menu-item-radius);
+        gap: var(--ax-menu-item-gap);
+        font-weight: 500;
+        border-radius: var(--ax-menu-item-radius);
+        transition: background-color var(--ax-transition-speed);
+        cursor: pointer;
+
+        &:disabled,
+        &.disabled {
+            pointer-events: none;
+            --ax-menu-item-text: var(--ax-menu-item-text-disabled);
+        }
+
+        &:hover:not(:disabled):not(.disabled):not(.divider):not(.list-menu-heading):not(.active) {
+            text-decoration: none;
+            background: var(--ax-menu-item-bg-hover);
+        }
+
+        &:active:not(:disabled):not(.disabled):not(.divider):not(.list-menu-heading):not(.active) {
+            background: var(--ax-menu-item-bg-active);
+        }
+
+        >svg {
+            color: var(--ax-menu-item-icon-color);
+            height: var(--ax-menu-item-icon-height);
+            width: var(--ax-menu-item-icon-height);
+            display: var(--ax-menu-item-icon-display);
+        }
+
+        >*+svg {
+            margin-left: auto;
+        }
+
+        &.danger {
+            --ax-menu-item-icon-color: var(--color-danger-700);
+            --ax-menu-item-text: var(--text-color-danger);
+        }
+
+        &.selected,
+        &[aria-selected="true"] {
+            color: var(--ax-menu-item-text-selected);
+            background: var(--ax-menu-item-bg-selected);
+        }
+
+        &.list-menu-heading {
+            font-weight: 500;
+            font-size: var(--ax-menu-heading-font-size);
+            color: var(--ax-menu-heading-text);
+            text-transform: uppercase;
+            padding-bottom: 0;
+        }
+
+        &.divider {
+            gap: 0;
+        }
+    }
+
+    /* variants */
+    .list-menu.no-icons a>svg,
+    .list-menu.no-icons button>svg {
+        --ax-menu-item-icon-display: none;
+    }
+
+}

@@ -1,0 +1,92 @@
+@layer theme {
+    :root {
+        --ax-sidebar-width: 256px;
+
+        --ax-sidebar-layout-gap: calc(var(--spacing) * 5);
+        --ax-sidebar-layout-main-padding: calc(var(--spacing) * 6);
+        --ax-sidebar-transition-speed: var(--ax-transition-speed);
+        --ax-drawer-background: color-mix(in srgb, black, transparent 50%);
+    }
+}
+
+@layer components {
+    .sidebar-layout {
+        display: grid;
+        gap: var(--ax-sidebar-layout-gap);
+        grid-template-columns: var(--ax-sidebar-width) 1fr;
+    }
+
+    .sidebar-layout .sidebar-drawer {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        position: sticky;
+        opacity: 1;
+        height: 100vh;
+        transition: all ease-in-out var(--ax-sidebar-transition-speed);
+        width: var(--ax-sidebar-width);
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .sidebar-layout > main {
+        padding: var(--ax-sidebar-layout-main-padding);
+    }
+
+    .sidebar-close {
+        display: none;
+    }
+
+    .sidebar-layout > .top-nav {
+        display: none;
+    }
+
+    @media (max-width: 756px) {
+        .sidebar-layout {
+            --ax-sidebar-layout-main-padding: 0 calc(var(--spacing) * 3) calc(var(--spacing) * 3);
+            display: block;
+        }
+
+        .sidebar-layout .sidebar-drawer {
+            position: fixed;
+            opacity: 0;
+            z-index: 999;
+            transition: opacity ease-in-out var(--ax-sidebar-transition-speed);
+            background-color: var(--ax-drawer-background);
+            pointer-events: none;
+        }
+
+        .sidebar-layout .sidebar-drawer.open {
+            opacity: 1;
+            pointer-events: painted;
+        }
+
+        .sidebar-layout .sidebar-drawer{
+            --ax-sidebar-bg: var(--background-color-popover);
+            width: 100%;
+        }
+
+        .sidebar-layout .sidebar {
+            --ax-sidebar-border-radius: 16px;
+            transform: scale(1);
+            transition: all ease-in-out 0.15s;
+        }
+
+        .sidebar-layout .sidebar-drawer.open .sidebar {
+            transform: scale(0.95);
+        }
+
+        .sidebar-layout .sidebar-drawer.open .sidebar-close {
+            display: block;
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 12px;;
+        }
+
+        .sidebar-layout > .top-nav {
+            --ax-topnav-padding-x: calc(var(--spacing) * 3);
+            display: flex;
+        }
+    }
+}

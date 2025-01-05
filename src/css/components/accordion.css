@@ -1,0 +1,64 @@
+@layer components {
+    :root {
+        --ax-accordion-border-width: 1px;
+        --ax-accordion-padding: calc(var(--spacing) * 3);
+        --ax-accordion-radius: var(--ax-radius);
+        --ax-accordion-text: inherit;
+        --ax-accordion-border-color: var(--border-color-border);
+        --ax-accordion-bg: var(--background-color-transparent);
+        --ax-accordion-bg-hover: var(--background-color-transparent-hover);
+        --ax-accordion-bg-active: var(--ax-accordion-bg-hover);
+    }
+
+    details {
+        display: block;
+        color: var(--ax-accordion-text);
+        background: var(--ax-accordion-bg);
+        border-radius: var(--ax-accordion-radius);
+        border: var(--ax-accordion-border-width) solid var(--ax-accordion-border-color);
+    }
+
+    details summary {
+        font-weight: 600;
+        line-height: 1.5rem;
+        cursor: pointer;
+        padding: var(--ax-accordion-padding);
+        transition: background-color var(--ax-transition-speed);
+
+        &:hover {
+            background: var(--ax-accordion-bg-hover);
+        }
+
+        &:focus-visible {
+            outline: none;
+            box-shadow: var(--focus-ring);
+        }
+    }
+
+    details > main  {
+        padding: var(--ax-accordion-padding);
+    }
+
+    details > main > p:last-child {
+        margin-bottom: 0;
+    }
+
+    details[open] summary {
+        background: var(--ax-accordion-bg-active);
+    }
+
+    .details-stack {
+        --ax-accordion-border-width: 1px;
+        border-radius: var(--ax-accordion-radius);
+        overflow: auto;
+    }
+
+    .details-stack > *:not(:last-child) {
+        --ax-accordion-radius: 0;
+        border-bottom-width: 0;
+    }
+
+    .details-stack > *:last-child:not(:first-child) {
+        --ax-accordion-radius: 0;
+    }
+}

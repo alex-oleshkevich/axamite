@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import './base.css';
+@import './theme.css';
+
+/* components */
+@import './type.css';
+@import './components/index.css';
+
+/* layouts */
+@import './layouts/index.css';
