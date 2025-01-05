@@ -3,7 +3,6 @@ name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
-  workflow_dispatch:
   push:
     branches: ["master"]
 
@@ -37,18 +36,18 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
       - run: npm run build
-      
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - run: cp *.html dist/
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: 'dist'
-      
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
