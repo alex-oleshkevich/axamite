@@ -1,0 +1,75 @@
+@layer theme {
+    :root {
+        --ax-richtext-border-width: 1px;
+        --ax-richtext-border-color: var(--border-color-border);
+        --ax-richtext-border-radius: var(--radius-md);
+        --ax-richtext-padding-y: calc(var(--spacing));
+        --ax-richtext-padding-x: calc(var(--spacing) * 2);
+        --ax-richtext-gap: calc(var(--spacing) * 2);
+
+        --ax-richtext-toolbar-padding-y: calc(var(--spacing) / 2);
+        --ax-richtext-toolbar-padding-x: 0;
+        --ax-richtext-toolbar-border: var(--border-color-border);
+        --ax-richtext-toolbar-button-padding-x: calc(var(--spacing) * 1);
+        --ax-richtext-toolbar-button-padding-y: calc(var(--spacing) * 1);
+        --ax-richtext-toolbar-button-height: calc(var(--spacing) * 4);
+        --ax-richtext-toolbar-button-min-width: calc(var(--spacing) * 4);
+        --ax-richtext-toolbar-button-icon-size: calc(var(--spacing) * 6);
+        --ax-richtext-toolbar-divider-padding: calc(var(--spacing) * 1);
+
+        --ax-richtext-editor-padding-y: calc(var(--spacing) * 2);
+        --ax-richtext-editor-padding-x: calc(var(--spacing) * 2);
+    }
+}
+
+@layer components {
+    .rich-text {
+        border: var(--ax-richtext-border-width) solid var(--ax-richtext-border-color);
+        border-radius: var(--ax-richtext-border-radius);
+        padding: var(--ax-richtext-padding-y) var(--ax-richtext-padding-x);
+
+        &:focus-within {
+            box-shadow: var(--ax-focus-ring);
+        }
+    }
+
+    .rich-text > nav,
+    .rich-text > .rich-text-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 1px;
+        padding: var(--ax-richtext-toolbar-padding-y) var(--ax-richtext-toolbar-padding-x);
+        margin-bottom: var(--ax-richtext-gap);
+        border-bottom: 1px solid var(--ax-richtext-toolbar-border);
+    }
+
+    .rich-text > nav > .btn,
+    .rich-text > .rich-text-toolbar > .btn {
+        --ax-button-height: var(--ax-richtext-toolbar-button-height);
+        --ax-button-padding: var(--ax-richtext-toolbar-button-padding-y) var(--ax-richtext-toolbar-button-padding-x);
+        --ax-button-icon-size: var(--ax-richtext-toolbar-button-icon-size);
+        font-weight: 500;
+        min-width: var(--ax-richtext-toolbar-button-min-width);
+    }
+
+    .rich-text > nav > .divider,
+    .rich-text > .rich-text-toolbar > .divider {
+        --ax-divider-height: calc(var(--ax-richtext-toolbar-button-height) + var(--ax-richtext-toolbar-button-padding-y) * 2);
+        width: 1px;
+        display: flex;
+        align-items: center;
+        margin-left: var(--ax-richtext-toolbar-divider-padding);
+        margin-right: var(--ax-richtext-toolbar-divider-padding);
+    }
+
+    .rich-text > .rich-text-editor, .rich-text > .ProseMirror {
+        padding: var(--ax-richtext-editor-padding-y) var(--ax-richtext-editor-padding-x);
+    }
+
+    .rich-text > [contenteditable] {
+        outline: none;
+    }
+
+    /* ProseMirror editor */
+}

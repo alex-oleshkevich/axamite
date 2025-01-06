@@ -1,0 +1,89 @@
+@layer theme {
+    :root {
+        --ax-dropdown-background: var(--background-color-popover);
+        --ax-dropdown-radius: var(--ax-radius);
+        --ax-dropdown-filter: drop-shadow(var(--drop-shadow-xl));
+        --ax-dropdown-border: var(--border-color-border);
+        --ax-dropdown-padding: calc(var(--spacing) * 1) 0;
+        --ax-dropdown-transition-speed: 0.15s;
+        --ax-dropdown-width: 280px;
+        --ax-dropdown-position: absolute;
+
+        --ax-popover-background: var(--background-color-popover);
+        --ax-popover-radius: var(--ax-radius);
+        --ax-popover-filter: drop-shadow(var(--drop-shadow-xl));
+        --ax-popover-border: var(--border-color-border);
+        --ax-popover-padding: calc(var(--spacing) * 1) 0;
+        --ax-popover-transition-speed: 0.15s;
+        --ax-popover-width: 280px;
+        --ax-popover-padding-x: calc(var(--spacing) * 5);
+        --ax-popover-padding-y: calc(var(--spacing) * 5);
+
+
+        --ax-popover-arrow-size: calc(var(--spacing) * 5);
+        --ax-popover-arrow-top-left-shadow: drop-shadow(0 -2px 2px red);
+    }
+}
+
+@layer components {
+    .dropdown {
+        visibility: hidden;
+        background: var(--ax-dropdown-background);
+        border-radius: var(--ax-dropdown-radius);
+        border: 1px solid var(--ax-dropdown-border);
+        padding: var(--ax-dropdown-padding);
+        position: var(--ax-dropdown-position);
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all var(--ax-dropdown-transition-speed);
+        width: var(--ax-dropdown-width);
+        filter: var(--ax-dropdown-filter);
+    }
+
+    .dropdown.open,
+    .dropdown:popover-open {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .dropdown.dropdown-static {
+        --ax-dropdown-position: static;
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@layer components {
+    .popover {
+        visibility: hidden;
+        background: var(--ax-popover-background);
+        border-radius: var(--ax-popover-radius);
+        border: 1px solid var(--ax-popover-border);
+        padding: var(--ax-popover-padding-y) var(--ax-popover-padding-x);
+        position: var(--ax-popover-position);
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all var(--ax-popover-transition-speed);
+        width: var(--ax-popover-width);
+        filter: var(--ax-popover-filter);
+        z-index: 1000;
+    }
+
+    /* states */
+    .popover.open,
+    .popover:popover-open {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .popover.popover-static {
+        --ax-popover-position: relative;
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
+}

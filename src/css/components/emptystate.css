@@ -1,0 +1,60 @@
+@layer theme {
+    :root {
+        --ax-emptystate-padding-x: calc(var(--spacing) * 5);
+        --ax-emptystate-padding-y: calc(var(--spacing) * 5);
+        --ax-emptystate-image-margin: calc(var(--spacing) * 10);
+        --ax-emptystate-image-max-width: calc(var(--spacing) * 64);
+
+        --ax-emptystate-header-font-size: var(--text-xl);
+        --ax-emptystate-header-font-weight: 500;
+        --ax-emptystate-header-color: var(--text-color-text);
+        --ax-emptystate-header-margin: calc(var(--spacing) * 1);
+
+
+        --ax-emptystate-text-font-size: var(--text-base);
+        --ax-emptystate-text-font-weight: normal;
+        --ax-emptystate-text-color: var(--text-color-secondary);
+        --ax-emptystate-text-margin: calc(var(--spacing) * 2);
+
+        --ax-emptystate-actions-margin: calc(var(--spacing) * 3);
+    }
+}
+
+@layer components {
+    .empty-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: var(--ax-emptystate-padding-y) var(--ax-emptystate-padding-x);
+        text-align: center;
+    }
+
+    .empty-state > svg {
+        width: 100%;
+        max-width: var(--ax-emptystate-image-max-width);
+        height: auto;
+        margin-bottom: var(--ax-emptystate-image-margin);
+    }
+
+    .empty-state > header {
+        font-size: var(--ax-emptystate-header-font-size);
+        font-weight: var(--ax-emptystate-header-font-weight);
+        color: var(--ax-emptystate-header-color);
+        margin-bottom: var(--ax-emptystate-header-margin);
+    }
+
+    .empty-state > main {
+        font-size: var(--ax-emptystate-text-font-size);
+        font-weight: var(--ax-emptystate-text-font-weight);
+        color: var(--ax-emptystate-text-color);
+        margin-bottom: var(--ax-emptystate-text-margin);
+    }
+
+    .empty-state > footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--ax-button-group-gap);
+        margin-top: var(--ax-emptystate-actions-margin);
+    }
+}

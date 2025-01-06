@@ -1,0 +1,108 @@
+@layer theme {
+    :root {
+        --ax-dropzone-padding: calc(var(--spacing) * 5);
+        --ax-dropzone-border-color: var(--border-color-border);
+        --ax-dropzone-border-width: 2px;
+        --ax-dropzone-border-style: dashed;
+        --ax-dropzone-border-radius: var(--ax-radius);
+        --ax-dropzone-bg: var(--background-color-transparent);
+        --ax-dropzone-font-size: var(--font-size-sm);
+        --ax-dropzone-line-height: var(--line-height-sm);
+
+        --ax-dropzone-icon-size: calc(var(--spacing) * 8);
+        --ax-dropzone-icon-margin: calc(var(--spacing) * 5);
+
+        --ax-dropzone-header-font-size: var(--text-lg);
+        --ax-dropzone-header-line-height: var(--text-lg--line-height);
+        --ax-dropzone-header-margin: 0;
+
+        --ax-dropzone-description-text: var(--text-color-secondary);
+        --ax-dropzone-description-margin: calc(var(--spacing) * 3);
+
+        --ax-dropzone-droptarget-border-color: var(--border-color-success);
+        --ax-dropzone-droperror-border-color: var(--border-color-danger);
+        --ax-dropzone-disabled-border-color: var(--border-color-border);
+        --ax-dropzone-disabled-text: var(--text-color-secondary);
+    }
+}
+
+@layer components {
+    .dropzone {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: var(--ax-dropzone-padding);
+        border: var(--ax-dropzone-border-width) var(--ax-dropzone-border-style) var(--ax-dropzone-border-color);
+        border-radius: var(--ax-dropzone-border-radius);
+        background-color: var(--ax-dropzone-bg);
+        color: var(--ax-dropzone-text);
+        text-align: center;
+        font-size: var(--ax-dropzone-font-size);
+        line-height: var(--ax-dropzone-line-height);
+    }
+
+    .dropzone > svg {
+        grid-area: icon;
+        width: var(--ax-dropzone-icon-size);
+        height: var(--ax-dropzone-icon-size);
+        margin-bottom: var(--ax-dropzone-icon-margin);
+    }
+
+    .dropzone > header {
+        grid-area: header;
+        font-size: var(--ax-dropzone-header-font-size);
+        line-height: var(--ax-dropzone-header-line-height);
+        margin-bottom: var(--ax-dropzone-header-margin);
+    }
+
+    .dropzone > main {
+        grid-area: description;
+        color: var(--ax-dropzone-description-text);
+        margin-bottom: var(--ax-dropzone-description-margin);
+    }
+
+    .dropzone > footer {
+        grid-area: actions;
+        display: flex;
+        gap: var(--ax-button-group-gap);
+    }
+
+    /* droptarget */
+    .dropzone.dropzone-droptarget {
+        border-color: var(--ax-dropzone-droptarget-border-color);
+    }
+
+    /* droptarget */
+    .dropzone.dropzone-droperror {
+        border-color: var(--ax-dropzone-droperror-border-color);
+    }
+
+    /* disabled */
+    .dropzone.disabled, .dropzone[aria-disabled="true"] {
+        pointer-events: none;
+        color: var(--ax-dropzone-disabled-text);
+        border-color: var(--ax-dropzone-disabled-border-color);
+    }
+
+    /* compact */
+    .dropzone.dropzone-compact {
+        --ax-dropzone-icon-size: calc(var(--spacing) * 8);
+        --ax-dropzone-icon-margin: 0;
+        --ax-dropzone-description-margin: 0;
+
+        display: grid;
+        justify-content: start;
+        align-content: start;
+        text-align: left;
+        grid-template-areas:
+            "icon header actions"
+            "icon description actions"
+            ;
+        grid-template-columns: calc(var(--ax-dropzone-icon-size) + calc(var(--spacing) * 5)) 1fr auto;
+    }
+
+    .dropzone.dropzone-compact > svg {
+        align-self: flex-start;
+    }
+}

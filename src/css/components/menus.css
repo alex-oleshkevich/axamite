@@ -98,6 +98,11 @@
         &.divider {
             gap: 0;
         }
+
+        &:focus-visible {
+            outline: none;
+            box-shadow: var(--ax-focus-ring);
+        }
     }
 
     /* variants */

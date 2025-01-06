@@ -30,8 +30,18 @@
 </head>
 
 <body class="antialiased">
-    <div class="container max-w-7xl mx-auto space-y-6">
-        <div class="top-nav">
+    <div class="container max-w-7xl mx-auto space-y-6 p-2">
+        <section class="top-nav" id="drawer">
+            <button class="top-nav-toggle btn" onclick="toggleOpen('#drawer')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                </svg>
+            </button>
+
             <a href="#" class="nav-brand">
                 <svg id="logo-86" width="40" height="40" viewBox="0 0 40 40" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -42,9 +52,7 @@
                         d="M10 5.16562e-07C10 1.31322 9.74135 2.61358 9.2388 3.82683C8.73625 5.04009 7.99966 6.14248 7.07107 7.07107C6.14249 7.99966 5.0401 8.73625 3.82684 9.2388C2.61358 9.74134 1.31322 10 5.4439e-06 10L5.00679e-06 20C2.62644 20 5.22716 19.4827 7.65368 18.4776C10.0802 17.4725 12.285 15.9993 14.1421 14.1421C15.9993 12.285 17.4725 10.0802 18.4776 7.65367C19.4827 5.22715 20 2.62643 20 -3.81469e-06L10 5.16562e-07Z"
                         fill="#007DFC"></path>
                 </svg>
-                Logo Ipsum
-
-                <button onclick="toggleOpen('#drawer')" class="btn-close"></button>
+                <span>Logo Ipsum</span>
             </a>
             <nav class="list-menu no-icons">
                 <a href="#" aria-selected="true">
@@ -93,7 +101,7 @@
                 </a>
             </nav>
 
-            <button onclick="openPopover('#usermenu')" class="user-menu ml-auto">
+            <button onclick="openPopover('#usermenu')" class="user-menu">
                 <div class="avatar" data-initials="JD"></div>
                 <div>
                     <div class="text-sm">John Doe</div>
@@ -114,10 +122,160 @@
                     </div>
                 </div> -->
             </button>
-        </div>
-        <main>
-            <h3>Page content</h3>
-            <p>Content goes here...</p>
+
+        </section>
+
+        <main class="space-y-6">
+            <section class="flex items-center justify-between">
+                <h3>Users</h3>
+                <div class="btn-group">
+                    <button class="btn">Export</button>
+                    <button class="btn btn-accent">Add new</button>
+                </div>
+            </section>
+            <section class="space-y-5">
+                <div class="tabs tabs-underline">
+                    <button class="tab active">All</button>
+                    <button class="tab">New</button>
+                    <button class="tab">Active</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>user@example.tld</td>
+                                <td>1'000</td>
+                                <td>2021-01-01</td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn btn-text btn-sm">Edit</button>
+                                        <button class="btn btn-text btn-sm btn-danger">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>user@example.tld</td>
+                                <td>1'000</td>
+                                <td>2021-01-01</td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn btn-text btn-sm">Edit</button>
+                                        <button class="btn btn-text btn-sm btn-danger">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>user@example.tld</td>
+                                <td>1'000</td>
+                                <td>2021-01-01</td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn btn-text btn-sm">Edit</button>
+                                        <button class="btn btn-text btn-sm btn-danger">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>user@example.tld</td>
+                                <td>1'000</td>
+                                <td>2021-01-01</td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn btn-text btn-sm">Edit</button>
+                                        <button class="btn btn-text btn-sm btn-danger">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>user@example.tld</td>
+                                <td>1'000</td>
+                                <td>2021-01-01</td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn btn-text btn-sm">Edit</button>
+                                        <button class="btn btn-text btn-sm btn-danger">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>user@example.tld</td>
+                                <td>1'000</td>
+                                <td>2021-01-01</td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn btn-text btn-sm">Edit</button>
+                                        <button class="btn btn-text btn-sm btn-danger">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <div class="pagination-info">
+                        Showing 1-10 of 100
+                    </div>
+                    <nav>
+                        <a class="btn btn-text" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l14 0" />
+                                <path d="M5 12l4 4" />
+                                <path d="M5 12l4 -4" />
+                            </svg>
+                            Prev
+                        </a>
+                        <a class="btn btn-text" href="#">1</a>
+                        <a class="btn btn-text" href="#">2</a>
+                        <a class="btn btn-text" href="#">3</a>
+                        <button class="btn btn-text" disabled>...</button>
+                        <a class="btn btn-text" href="#">10</a>
+                        <a class="btn btn-text" href="#">11</a>
+                        <a class="btn btn-text" href="#">
+                            Next
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l14 0" />
+                                <path d="M15 16l4 -4" />
+                                <path d="M15 8l4 4" />
+                            </svg>
+                        </a>
+                    </nav>
+                </div>
+            </section>
         </main>
     </div>
 

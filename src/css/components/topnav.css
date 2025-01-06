@@ -4,10 +4,11 @@
         --ax-topnav-menu-gap: calc(var(--spacing) * 2);
         --ax-topnav-height: auto;
         --ax-topnav-padding-x: 0;
-        --ax-topnav-padding-y: calc(var(--spacing) * 2);
+        --ax-topnav-padding-y: calc(var(--spacing) * 3);
         --ax-topnav-background: var(--background-color-transparent);
-        --ax-topnav-border-width: 0;
+        --ax-topnav-border-width: 1px;
         --ax-topnav-border-color: var(--border-color-border);
+        --ax-topnav-open-padding: calc(var(--spacing) * 3) calc(var(--spacing) * 2);
     }
 }
 
@@ -16,7 +17,7 @@
         --ax-menu-display: flex;
         --ax-menu-gap: var(--ax-topnav-menu-gap);
         --ax-menu-item-display: inline-flex;
-        --ax-navbrand-padding: 0;
+        --ax-navbrand-padding: calc(var(--spacing)) 0;
         --ax-menu-item-icon-color: var(--text-color-text);
         --ax-menu-item-width: auto;
 
@@ -29,9 +30,84 @@
         border-bottom: var(--ax-topnav-border-width) solid var(--ax-topnav-border-color);
     }
 
-    .top-nav > .user-menu {
+    .top-nav>.user-menu {
         --ax-usermenu-padding-x: calc(var(--spacing) * 2);
         --ax-usermenu-padding-y: calc(var(--spacing) * 1);
         align-self: flex-end;
+        margin-left: auto;
+    }
+
+    .top-nav-toggle {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .top-nav-toggle {
+            display: inherit;
+        }
+
+        .top-nav {
+            --ax-topnav-padding-y: calc(var(--spacing) * 1);
+            justify-content: space-between;
+        }
+
+        .top-nav.open .nav-brand,
+        .top-nav.open .list-menu,
+        .top-nav.open .user-menu {
+            width: 100%;
+        }
+
+        .top-nav:not(.open)>.nav-brand {
+            display: none;
+        }
+
+        .top-nav:not(.open)>.user-menu>*:not(.avatar) {
+            display: none;
+        }
+
+        .top-nav>.top-nav-toggle {
+            --ax-button-padding: calc(var(--spacing) * 1);
+            --ax-button-border-width: 0;
+            --ax-button-shadow: none;
+            --ax-button-height: calc(var(--spacing) * 10);
+            width: calc(var(--spacing) * 10);
+
+            >svg {
+                height: calc(var(--spacing) * 8);
+                width: calc(var(--spacing) * 8);
+                stroke-width: 1px;
+            }
+        }
+
+        .top-nav>.list-menu {
+            display: none;
+            background-color: var(--background-color-popover);
+        }
+
+        .top-nav>.list-menu>a,
+        .top-nav>.list-menu>button {
+            display: block;
+            width: 100%;
+        }
+
+        /* open */
+
+        .top-nav.open {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: var(--ax-topnav-open-padding);
+            background-color: var(--background-color-popover);
+            border-bottom: 2px solid var(--border-color-accent);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .top-nav.open>.list-menu {
+            display: block;
+        }
+
     }
 }

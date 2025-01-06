@@ -29,9 +29,9 @@
     .divider::after,
     .divider::before {
         content: '';
-        height: var(--ax-divider-height);
         flex-grow: 1;
-        background: var(--ax-divider-border-color);
+        height: var(--ax-divider-height);
+        background-color: var(--ax-divider-border-color);
     }
 
     .divider.divider-left::before {
@@ -41,4 +41,5 @@
     .divider.divider-right::after {
         display: none;
     }
+
 }

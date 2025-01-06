@@ -14,14 +14,14 @@
         "src",
         "dist"
     ],
-    "version": "0.2.0",
+    "version": "0.3.0",
     "license": "MIT",
     "scripts": {
         "build": "npm run clean && npm run build:base && npm run build:full && npm run build:components",
         "build:base": "npx @tailwindcss/cli -i src/css/index.css -o dist/css/index.css",
         "build:full": "npx @tailwindcss/cli -i src/css/index-standalone.css -o dist/css/standalone.css",
         "build:components": "esbuild `find src/js/ \\( -name '*.ts' \\)` --outdir=dist/js",
-        "watch": "npx @tailwindcss/cli -i src/css/index.css -o dist/styles.css -w",
+        "watch": "npx @tailwindcss/cli -i src/css/index-dev.css -o dist/css/standalone.css -w",
         "clean": "rm -rf ./dist",
         "docs:dev": "vitepress dev docs",
         "docs:build": "vitepress build docs",

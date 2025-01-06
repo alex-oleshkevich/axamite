@@ -17,6 +17,7 @@
         font-weight: 500;
         align-items: center;
         display: flex;
+        align-self: flex-end;
         gap: calc(var(--spacing) * 1);
     }
 

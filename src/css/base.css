@@ -12,6 +12,12 @@
         text-rendering: optimizeLegibility;
     }
 
+    a:focus-visible,
+    button:focus-visible {
+        outline: none;
+        box-shadow: var(--ax-focus-ring);
+    }
+
     @supports (font-variation-settings: normal) {
         :root {
             font-family: InterVariable, sans-serif;

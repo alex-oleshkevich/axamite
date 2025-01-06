@@ -8,6 +8,10 @@
         --ax-input-height: calc(var(--spacing) * 9);
         --ax-input-border-radius: var(--ax-radius);
 
+        --ax-input-filled-bg: var(--background-color-surface2);
+        --ax-input-filled-disabled-bg: var(--background-color-surface3);
+        --ax-input-filled-border-color: transparent;
+
         --ax-input-disabled-text: var(--text-color-secondary);
         --ax-input-disabled-bg: color-mix(in srgb, black, transparent 97%);
         --ax-input-disabled-border-color: var(--border-color-border);
@@ -26,6 +30,14 @@
         --ax-input-switch-knob-bg: var(--background-color-secondary);
         --ax-input-switch-disabled-bg: color-mix(in srgb, black, transparent 97%);
         --ax-input-switch-transition-speed: 100ms;
+
+        --ax-input-range-height: calc(var(--spacing) * 2);
+        --ax-input-range-radius: var(--ax-input-border-radius);
+        --ax-input-range-bg: var(--background-color-surface2);
+        --ax-input-range-track-border: white;
+        --ax-input-range-track-border-width: 2px;
+        --ax-input-range-track-size: calc(var(--spacing) * 6);
+        --ax-input-range-track-bg: var(--background-color-accent);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -51,7 +63,8 @@
     input[type="url"],
     input[type="week"],
     input[type="month"],
-    select, textarea,
+    select,
+    textarea,
     .form-control {
         padding: var(--ax-input-padding);
         color: var(--ax-input-text);
@@ -81,7 +94,10 @@
         }
     }
 
-    input[type="checkbox"]:not(.form-switch), input[type="radio"] {
+    /* checkbox and radio */
+
+    input[type="checkbox"]:not(.form-switch),
+    input[type="radio"] {
         appearance: none;
         display: inline-flex;
         align-content: center;
@@ -147,6 +163,7 @@
         border-radius: 100%;
     }
 
+    /* switch */
     input[type="checkbox"].form-switch,
     input[type="checkbox"][role="switch"] {
         appearance: none;
@@ -187,6 +204,26 @@
         }
     }
 
+    /* range */
+    input[type="range"] {
+        width: 100%;
+        appearance: none;
+        background-color: var(--ax-input-range-bg);
+        height: var(--ax-input-range-height);
+        border-radius: var(--ax-input-range-radius);
+    }
+
+    input[type=range]::slider-thumb,
+    input[type=range]::-webkit-slider-thumb {
+        appearance: none;
+        border: var(--ax-input-range-track-border-width) solid var(--ax-input-range-track-border);
+        height: var(--ax-input-range-track-size);
+        width: var(--ax-input-range-track-size);
+        border-radius: 99999px;
+        background: var(--ax-input-range-track-bg);
+        cursor: pointer;
+    }
+
     textarea {
         min-height: 9rem;
     }
@@ -198,7 +235,8 @@
         justify-content: center;
     }
 
-    .form-group label, .form-label {
+    .form-group label,
+    .form-label {
         font-weight: 500;
         margin-bottom: 0.25rem;
     }
@@ -220,7 +258,7 @@
     }
 
     form .form-group:not(:last-child),
-    .form-fieldset > .form-group:not(:last-child){
+    .form-fieldset>.form-group:not(:last-child) {
         margin-bottom: calc(var(--spacing) * 4);
     }
 
@@ -233,7 +271,8 @@
         font-size: var(--font-sm);
         color: var(--text-color-danger);
 
-        & > ul, & > ul li {
+        &>ul,
+        &>ul li {
             margin: 0;
             padding: 0;
         }
@@ -244,7 +283,8 @@
         display: flex;
         align-items: center;
 
-        & input, & select {
+        & input,
+        & select {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
         }
@@ -260,7 +300,8 @@
         display: flex;
         align-items: center;
 
-        & input, & select {
+        & input,
+        & select {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
         }
@@ -269,5 +310,12 @@
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
         }
+    }
+
+    /* filled */
+    .form-control-filled {
+        --ax-input-bg: var(--ax-input-filled-bg);
+        --ax-input-disabled-bg: var(--ax-input-filled-disabled-bg);
+        --ax-input-border-color: var(--ax-input-filled-border-color);
     }
 }

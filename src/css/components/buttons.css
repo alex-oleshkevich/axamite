@@ -8,6 +8,7 @@
         --ax-button-transition-speed: var(--ax-transition-speed);
         --ax-button-shadow: var(--shadow-xs);
         --ax-button-icon-size: calc(var(--spacing) * 5);
+        --ax-button-border-width: 1px;
         --ax-button-border-color: var(--border-color-border);
 
         /* small */
@@ -60,6 +61,9 @@
         /* selected button */
         --ax-button-selected-text: var(--text-color-onselected);
         --ax-button-selected-bg: var(--background-color-selected);
+
+        /* button group */
+        --ax-button-group-gap: calc(var(--spacing) * 1);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -95,7 +99,7 @@
         font-size: var(--ax-button-font-size);
         color: var(--ax-button-text);
         background: var(--ax-button-bg);
-        border: 1px solid var(--ax-button-border-color);
+        border: var(--ax-button-border-width) solid var(--ax-button-border-color);
         line-height: var(--ax-button-line-height);
         min-height: var(--ax-button-height);
         border-radius: var(--ax-button-border-radius);
@@ -239,5 +243,12 @@
     /* Modifiers */
     .btn-block {
         width: 100%;
+    }
+
+    /* button group */
+    .btn-group {
+        display: flex;
+        align-items: center;
+        gap: var(--ax-button-group-gap);
     }
 }

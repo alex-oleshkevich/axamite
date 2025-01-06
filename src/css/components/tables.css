@@ -1,7 +1,11 @@
 @layer theme {
     :root {
-        --ax-table-header-text: var(--text-color-text);
-        --ax-table-header-bg: var(--background-color-surface2);
+        --ax-table-border-top-width: 0;
+        --ax-table-border-bottom-width: 1px;
+
+        --ax-table-header-text: var(--text-color-secondary);
+        --ax-table-header-font-weight: 500;
+        --ax-table-header-bg: var(--background-color-transparent);
         --ax-table-header-bg-hover: var(--background-color-surface2-hover);
 
         --ax-table-padding-x: calc(var(--spacing) * 3);
@@ -24,19 +28,19 @@
 @layer components {
     .table {
         width: 100%;
-        border-top: var(--ax-table-border-width) solid var(--ax-table-border-color);
-        border-bottom: var(--ax-table-border-width) solid var(--ax-table-border-color);
+        border-top: var(--ax-table-border-top-width) solid var(--ax-table-border-color);
+        border-bottom: var(--ax-table-border-bottom-width) solid var(--ax-table-border-color);
         line-height: var(--ax-table-line-height);
     }
 
-    .table tr {
+    .table tbody tr {
         border-top: var(--ax-table-border-width) solid var(--ax-table-border-color);
     }
 
     .table thead th {
         text-align: left;
         padding: var(--ax-table-padding-y) var(--ax-table-padding-x);
-        font-weight: 600;
+        font-weight: var(--ax-table-header-font-weight);
         color: var(--ax-table-header-text);
         background: var(--ax-table-header-bg);
     }
@@ -84,5 +88,18 @@
     .table.table-compacts {
         --ax-table-padding-x: var(--ax-table-sm-padding-x);
         --ax-table-padding-y: var(--ax-table-sm-padding-y);
+    }
+
+    /* table row actions */
+    .table-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: var(--ax-button-group-gap);
+    }
+
+    /* responsible */
+    .table-responsive {
+        overflow-x: auto;
     }
 }
