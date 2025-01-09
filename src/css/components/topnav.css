@@ -9,17 +9,31 @@
         --ax-topnav-border-width: 1px;
         --ax-topnav-border-color: var(--border-color-border);
         --ax-topnav-open-padding: calc(var(--spacing) * 3) calc(var(--spacing) * 2);
+
+        --ax-topnav-menu-item-radius: var(--ax-menu-item-radius);
+        --ax-topnav-menu-item-padding-y: calc(var(--spacing) * 2);
+        --ax-topnav-menu-item-padding-x: calc(var(--spacing) * 3);
+        --ax-topnav-menu-font-size: var(--ax-menu-item-font-size);
+        --ax-topnav-menu-font-weight: var(--ax-menu-item-font-weight);
+        --ax-topnav-menu-line-weight: var(--ax-menu-item-line-height);
+        --ax-topnav-menu-text: var(--ax-menu-item-text);
+        --ax-topnav-menu-text-disabled: var(--ax-menu-item-text-disabled);
+        --ax-topnav-menu-bg: var(--ax-menu-item-bg);
+        --ax-topnav-menu-bg-hover: var(--background-color-transparent-hover);
+        --ax-topnav-menu-bg-active: var(--background-color-transparent-hover);
+        --ax-topnav-menu-bg-selected: var(--background-color-transparent-hover);
+        --ax-topnav-menu-bg-selected-hover: var(--background-color-transparent-active);
+        --ax-topnav-menu-text-selected: var(--text-color-text);
+        --ax-topnav-menu-icon-height: var(--ax-menu-item-icon-height);
+        --ax-topnav-menu-icon-color: var(--ax-menu-item-icon-color);
+        --ax-topnav-menu-icon-display: var(--ax-menu-item-icon-display);
+        --ax-topnav-menu-font-size: var(--text-base);
     }
 }
 
 @layer components {
     .top-nav {
-        --ax-menu-display: flex;
-        --ax-menu-gap: var(--ax-topnav-menu-gap);
-        --ax-menu-item-display: inline-flex;
         --ax-navbrand-padding: calc(var(--spacing)) 0;
-        --ax-menu-item-icon-color: var(--text-color-text);
-        --ax-menu-item-width: auto;
 
         display: flex;
         align-items: center;
@@ -28,6 +42,29 @@
         padding: var(--ax-topnav-padding-y) var(--ax-topnav-padding-x);
         background: var(--ax-topnav-background);
         border-bottom: var(--ax-topnav-border-width) solid var(--ax-topnav-border-color);
+    }
+
+    .top-nav > .list-menu {
+        --ax-menu-item-width: auto;
+        --ax-menu-item-display: inline-flex;
+        --ax-menu-item-radius: var(--ax-topnav-menu-item-radius);
+        --ax-menu-item-padding-y: var(--ax-topnav-menu-item-padding-y);
+        --ax-menu-item-padding-x: var(--ax-topnav-menu-item-padding-x);
+        --ax-menu-item-font-size: var(--ax-topnav-menu-font-size);
+        --ax-menu-item-font-weight: var(--ax-topnav-menu-font-weight);
+        --ax-menu-item-line-height: var(--ax-topnav-menu-line-weight);
+        --ax-menu-item-text: var(--ax-topnav-menu-text);
+        --ax-menu-item-text-disabled: var(--ax-topnav-menu-text-disabled);
+        --ax-menu-item-bg: var(--ax-topnav-menu-bg);
+        --ax-menu-item-bg-hover: var(--ax-topnav-menu-bg-hover);
+        --ax-menu-item-bg-active: var(--ax-topnav-menu-bg-active);
+        --ax-menu-item-bg-selected: var(--ax-topnav-menu-bg-selected);
+        --ax-menu-item-bg-selected-hover: var(--ax-topnav-menu-bg-selected-hover);
+        --ax-menu-item-text-selected: var(--ax-topnav-menu-text-selected);
+        --ax-menu-item-icon-height: var(--ax-topnav-menu-icon-height);
+        --ax-menu-item-icon-color: var(--ax-topnav-menu-icon-color);
+        --ax-menu-item-icon-display: var(--ax-topnav-menu-icon-display);
+        --ax-menu-item-icon-display: var(--ax-topnav-menu-icon-display);
     }
 
     .top-nav>.user-menu {

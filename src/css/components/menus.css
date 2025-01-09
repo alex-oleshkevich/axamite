@@ -4,16 +4,20 @@
         --ax-menu-display: block;
 
         --ax-menu-item-radius: var(--radius-md);
-        --ax-menu-item-padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+        --ax-menu-item-padding-y: calc(var(--spacing) * 2);
+        --ax-menu-item-padding-x: calc(var(--spacing) * 3);
         --ax-menu-item-gap: calc(var(--spacing) * 2);
+        --ax-menu-item-font-size: inherit;
+        --ax-menu-item-font-weight: 500;
         --ax-menu-item-line-height: calc(var(--spacing) * 6);
         --ax-menu-item-text: var(--text-color-text);
         --ax-menu-item-text-disabled: var(--text-color-secondary);
         --ax-menu-item-bg: var(--background-color-transparent);
         --ax-menu-item-bg-hover: var(--background-color-transparent-hover);
         --ax-menu-item-bg-active: var(--background-color-transparent-active);
-        --ax-menu-item-text-selected: var(--text-color-onselected);
         --ax-menu-item-bg-selected: var(--background-color-selected);
+        --ax-menu-item-bg-selected-hover: var(--background-color-selected-hover);
+        --ax-menu-item-text-selected: var(--text-color-onselected);
         --ax-menu-item-display: flex;
         --ax-menu-item-width: 100%;
 
@@ -36,16 +40,17 @@
     .list-menu>a,
     .list-menu>span {
         display: var(--ax-menu-item-display);
-        padding: var(--ax-menu-item-padding);
+        padding: var(--ax-menu-item-padding-y) var(--ax-menu-item-padding-x);
         align-items: center;
         justify-content: start;
         align-self: stretch;
         width: var(--ax-menu-item-width);
         color: var(--ax-menu-item-text);
+        font-size: var(--ax-menu-item-font-size);
         line-height: var(--ax-menu-item-line-height);
         border-radius: var(--ax-menu-item-radius);
         gap: var(--ax-menu-item-gap);
-        font-weight: 500;
+        font-weight: var(--ax-menu-item-font-weight);
         border-radius: var(--ax-menu-item-radius);
         transition: background-color var(--ax-transition-speed);
         cursor: pointer;
@@ -56,13 +61,25 @@
             --ax-menu-item-text: var(--ax-menu-item-text-disabled);
         }
 
-        &:hover:not(:disabled):not(.disabled):not(.divider):not(.list-menu-heading):not(.active) {
+        &:hover {
             text-decoration: none;
-            background: var(--ax-menu-item-bg-hover);
         }
 
-        &:active:not(:disabled):not(.disabled):not(.divider):not(.list-menu-heading):not(.active) {
-            background: var(--ax-menu-item-bg-active);
+        &:hover:not(:disabled):not(.divider):not(.list-menu-heading) {
+            text-decoration: none;
+
+            &.selected, &[aria-selected="true"] {
+                background-color: var(--ax-menu-item-bg-selected-hover);
+            }
+
+            &:not(.selected):not([aria-selected="true"]) {
+                background-color: var(--ax-menu-item-bg-hover);
+            }
+
+        }
+
+        &:active:not(:disabled):not(.divider):not(.list-menu-heading):not(.selected):not([aria-selected="true"]) {
+            background-color: var(--ax-menu-item-bg-active);
         }
 
         >svg {

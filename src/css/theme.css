@@ -276,6 +276,7 @@
     --text-color-selected: var(--text-color-accent);
     --text-color-onselected: var(--text-color-accent);
     --background-color-selected: var(--color-accent-100);
+    --background-color-selected-hover: var(--color-accent-200);
 
     /* transparent elements with hover effect */
     --text-color-ontransparent: var(--text-color-text);
