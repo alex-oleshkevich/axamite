@@ -35,7 +35,7 @@
         align-items: center;
         gap: var(--ax-badge-gap);
         color: var(--ax-badge-text);
-        background: var(--ax-badge-bg);
+        background-color: var(--ax-badge-bg);
         font-size: var(--ax-badge-font-size);
         font-weight: 500;
         padding: var(--ax-badge-padding);
@@ -68,270 +68,269 @@
         --ax-badge-radius: var(--ax-badge-lg-radius);
     }
 
-    /* semantic */
-
-    .badge-accent {
-        --ax-badge-text: var(--text-color-onaccent);
-        --ax-badge-bg: var(--background-color-accent);
-        --ax-badge-border: var(--border-color-accent);
-    }
-
-    .badge-danger {
-        --ax-badge-text: var(--text-color-ondanger);
-        --ax-badge-bg: var(--background-color-danger);
-        --ax-badge-border: var(--border-color-danger);
-    }
-
-    .badge-success {
-        --ax-badge-text: var(--text-color-onsuccess);
-        --ax-badge-bg: var(--background-color-success);
-        --ax-badge-border: var(--border-color-success);
-    }
-
-    .badge-warning {
-        --ax-badge-text: var(--text-color-onwarning);
-        --ax-badge-bg: var(--background-color-warning);
-        --ax-badge-border: var(--border-color-warning);
-    }
-
-    /* colors */
-
-    .badge-red {
-        --ax-badge-text: var(--text-color-onred);
-        --ax-badge-bg: var(--background-color-red);
-        --ax-badge-border: var(--border-color-red);
-    }
-
-    .badge-orange {
-        --ax-badge-text: var(--text-color-onorange);
-        --ax-badge-bg: var(--background-color-orange);
-        --ax-badge-border: var(--border-color-orange);
-    }
-
-    .badge-amber {
-        --ax-badge-text: var(--text-color-onamber);
-        --ax-badge-bg: var(--background-color-amber);
-        --ax-badge-border: var(--border-color-amber);
-    }
-
-    .badge-yellow {
-        --ax-badge-text: var(--text-color-onyellow);
-        --ax-badge-bg: var(--background-color-yellow);
-        --ax-badge-border: var(--border-color-yellow);
-    }
-
-    .badge-lime {
-        --ax-badge-text: var(--text-color-onlime);
-        --ax-badge-bg: var(--background-color-lime);
-        --ax-badge-border: var(--border-color-lime);
-    }
-
-    .badge-green {
-        --ax-badge-text: var(--text-color-ongreen);
-        --ax-badge-bg: var(--background-color-green);
-        --ax-badge-border: var(--border-color-green);
-    }
-
-    .badge-emerald {
-        --ax-badge-text: var(--text-color-onemerald);
-        --ax-badge-bg: var(--background-color-emerald);
-        --ax-badge-border: var(--border-color-emerald);
-    }
-
-    .badge-teal {
-        --ax-badge-text: var(--text-color-onteal);
-        --ax-badge-bg: var(--background-color-teal);
-        --ax-badge-border: var(--border-color-teal);
-    }
-
-    .badge-cyan {
-        --ax-badge-text: var(--text-color-oncyan);
-        --ax-badge-bg: var(--background-color-cyan);
-        --ax-badge-border: var(--border-color-cyan);
-    }
-
-    .badge-sky {
-        --ax-badge-text: var(--text-color-onsky);
-        --ax-badge-bg: var(--background-color-sky);
-        --ax-badge-border: var(--border-color-sky);
-    }
-
-    .badge-blue {
-        --ax-badge-text: var(--text-color-onblue);
-        --ax-badge-bg: var(--background-color-blue);
-        --ax-badge-border: var(--border-color-blue);
-    }
-
-    .badge-indigo {
-        --ax-badge-text: var(--text-color-onindigo);
-        --ax-badge-bg: var(--background-color-indigo);
-        --ax-badge-border: var(--border-color-indigo);
-    }
-
-    .badge-violet {
-        --ax-badge-text: var(--text-color-onviolet);
-        --ax-badge-bg: var(--background-color-violet);
-        --ax-badge-border: var(--border-color-violet);
-    }
-
-    .badge-purple {
-        --ax-badge-text: var(--text-color-onpurple);
-        --ax-badge-bg: var(--background-color-purple);
-        --ax-badge-border: var(--border-color-purple);
-    }
-
-    .badge-fuchsia {
-        --ax-badge-text: var(--text-color-onfuchsia);
-        --ax-badge-bg: var(--background-color-fuchsia);
-        --ax-badge-border: var(--border-color-fuchsia);
-    }
-
-    .badge-rose {
-        --ax-badge-text: var(--text-color-onrose);
-        --ax-badge-bg: var(--background-color-rose);
-        --ax-badge-border: var(--border-color-rose);
-    }
-
-    .badge-pink {
-        --ax-badge-text: var(--text-color-onpink);
-        --ax-badge-bg: var(--background-color-pink);
-        --ax-badge-border: var(--border-color-pink);
-    }
 
     /* subtle */
 
-    .badge-subtle {
-        --ax-badge-text: var(--text-color-onmono-subtle);
-        --ax-badge-bg: var(--background-color-mono-subtle);
-        --ax-badge-border: var(--border-color-mono-subtle);
-    }
-
-    .badge-subtle.badge-accent {
+    .badge-accent {
         --ax-badge-text: var(--text-color-onaccent-subtle);
         --ax-badge-bg: var(--background-color-accent-subtle);
         --ax-badge-border: var(--border-color-accent-subtle);
     }
 
-    .badge-subtle.badge-success {
+    .badge-success {
         --ax-badge-text: var(--text-color-onsuccess-subtle);
         --ax-badge-bg: var(--background-color-success-subtle);
         --ax-badge-border: var(--border-color-success-subtle);
     }
 
-    .badge-subtle.badge-warning {
+    .badge-warning {
         --ax-badge-text: var(--text-color-onwarning-subtle);
         --ax-badge-bg: var(--background-color-warning-subtle);
         --ax-badge-border: var(--border-color-warning-subtle);
     }
 
-    .badge-subtle.badge-danger {
+    .badge-danger {
         --ax-badge-text: var(--text-color-ondanger-subtle);
         --ax-badge-bg: var(--background-color-danger-subtle);
         --ax-badge-border: var(--border-color-danger-subtle);
     }
 
-    .badge-subtle.badge-red {
+    .badge-red {
         --ax-badge-text: var(--text-color-onred-subtle);
         --ax-badge-bg: var(--background-color-red-subtle);
         --ax-badge-border: var(--border-color-red-subtle);
     }
 
-    .badge-subtle.badge-yellow {
+    .badge-yellow {
         --ax-badge-text: var(--text-color-onyellow-subtle);
         --ax-badge-bg: var(--background-color-yellow-subtle);
         --ax-badge-border: var(--border-color-yellow-subtle);
     }
 
-    .badge-subtle.badge-orange {
+    .badge-orange {
         --ax-badge-text: var(--text-color-onorange-subtle);
         --ax-badge-bg: var(--background-color-orange-subtle);
         --ax-badge-border: var(--border-color-orange-subtle);
     }
 
-    .badge-subtle.badge-amber {
+    .badge-amber {
         --ax-badge-text: var(--text-color-onamber-subtle);
         --ax-badge-bg: var(--background-color-amber-subtle);
         --ax-badge-border: var(--border-color-amber-subtle);
     }
 
-    .badge-subtle.badge-lime {
+    .badge-lime {
         --ax-badge-text: var(--text-color-onlime-subtle);
         --ax-badge-bg: var(--background-color-lime-subtle);
         --ax-badge-border: var(--border-color-lime-subtle);
     }
 
-    .badge-subtle.badge-green {
+    .badge-green {
         --ax-badge-text: var(--text-color-ongreen-subtle);
         --ax-badge-bg: var(--background-color-green-subtle);
         --ax-badge-border: var(--border-color-green-subtle);
     }
 
-    .badge-subtle.badge-emerald {
+    .badge-emerald {
         --ax-badge-text: var(--text-color-onemerald-subtle);
         --ax-badge-bg: var(--background-color-emerald-subtle);
         --ax-badge-border: var(--border-color-emerald-subtle);
     }
 
-    .badge-subtle.badge-teal {
+    .badge-teal {
         --ax-badge-text: var(--text-color-onteal-subtle);
         --ax-badge-bg: var(--background-color-teal-subtle);
         --ax-badge-border: var(--border-color-teal-subtle);
     }
 
-    .badge-subtle.badge-cyan {
+    .badge-cyan {
         --ax-badge-text: var(--text-color-oncyan-subtle);
         --ax-badge-bg: var(--background-color-cyan-subtle);
         --ax-badge-border: var(--border-color-cyan-subtle);
     }
 
-    .badge-subtle.badge-sky {
+    .badge-sky {
         --ax-badge-text: var(--text-color-onsky-subtle);
         --ax-badge-bg: var(--background-color-sky-subtle);
         --ax-badge-border: var(--border-color-sky-subtle);
     }
 
-    .badge-subtle.badge-blue {
+    .badge-blue {
         --ax-badge-text: var(--text-color-onblue-subtle);
         --ax-badge-bg: var(--background-color-blue-subtle);
         --ax-badge-border: var(--border-color-blue-subtle);
     }
 
-    .badge-subtle.badge-indigo {
+    .badge-indigo {
         --ax-badge-text: var(--text-color-onindigo-subtle);
         --ax-badge-bg: var(--background-color-indigo-subtle);
         --ax-badge-border: var(--border-color-indigo-subtle);
     }
 
-    .badge-subtle.badge-violet {
+    .badge-violet {
         --ax-badge-text: var(--text-color-onviolet-subtle);
         --ax-badge-bg: var(--background-color-violet-subtle);
         --ax-badge-border: var(--border-color-violet-subtle);
     }
 
-    .badge-subtle.badge-purple {
+    .badge-purple {
         --ax-badge-text: var(--text-color-onpurple-subtle);
         --ax-badge-bg: var(--background-color-purple-subtle);
         --ax-badge-border: var(--border-color-purple-subtle);
     }
 
-    .badge-subtle.badge-fuchsia {
+    .badge-fuchsia {
         --ax-badge-text: var(--text-color-onfuchsia-subtle);
         --ax-badge-bg: var(--background-color-fuchsia-subtle);
         --ax-badge-border: var(--border-color-fuchsia-subtle);
     }
 
-    .badge-subtle.badge-pink {
+    .badge-pink {
         --ax-badge-text: var(--text-color-onpink-subtle);
         --ax-badge-bg: var(--background-color-pink-subtle);
         --ax-badge-border: var(--border-color-pink-subtle);
     }
 
-    .badge-subtle.badge-rose {
+    .badge-rose {
         --ax-badge-text: var(--text-color-onrose-subtle);
         --ax-badge-bg: var(--background-color-rose-subtle);
         --ax-badge-border: var(--border-color-rose-subtle);
     }
 
+
+    /* filled */
+
+    .badge-filled {
+        color: var(--ax-badge-text);
+        background-color: var(--ax-badge-bg);
+        border: 1px solid var(--ax-badge-border);
+    }
+
+    .badge-filled.badge-accent {
+        --ax-badge-text: var(--text-color-onaccent);
+        --ax-badge-bg: var(--background-color-accent);
+        --ax-badge-border: var(--border-color-accent);
+    }
+
+    .badge-filled.badge-danger {
+        --ax-badge-text: var(--text-color-ondanger);
+        --ax-badge-bg: var(--background-color-danger);
+        --ax-badge-border: var(--border-color-danger);
+    }
+
+    .badge-filled.badge-success {
+        --ax-badge-text: var(--text-color-onsuccess);
+        --ax-badge-bg: var(--background-color-success);
+        --ax-badge-border: var(--border-color-success);
+    }
+
+    .badge-filled.badge-warning {
+        --ax-badge-text: var(--text-color-onwarning);
+        --ax-badge-bg: var(--background-color-warning);
+        --ax-badge-border: var(--border-color-warning);
+    }
+
+    .badge-filled.badge-red {
+        --ax-badge-text: var(--text-color-onred);
+        --ax-badge-bg: var(--background-color-red);
+        --ax-badge-border: var(--border-color-red);
+    }
+
+    .badge-filled.badge-orange {
+        --ax-badge-text: var(--text-color-onorange);
+        --ax-badge-bg: var(--background-color-orange);
+        --ax-badge-border: var(--border-color-orange);
+    }
+
+    .badge-filled.badge-amber {
+        --ax-badge-text: var(--text-color-onamber);
+        --ax-badge-bg: var(--background-color-amber);
+        --ax-badge-border: var(--border-color-amber);
+    }
+
+    .badge-filled.badge-yellow {
+        --ax-badge-text: var(--text-color-onyellow);
+        --ax-badge-bg: var(--background-color-yellow);
+        --ax-badge-border: var(--border-color-yellow);
+    }
+
+    .badge-filled.badge-lime {
+        --ax-badge-text: var(--text-color-onlime);
+        --ax-badge-bg: var(--background-color-lime);
+        --ax-badge-border: var(--border-color-lime);
+    }
+
+    .badge-filled.badge-green {
+        --ax-badge-text: var(--text-color-ongreen);
+        --ax-badge-bg: var(--background-color-green);
+        --ax-badge-border: var(--border-color-green);
+    }
+
+    .badge-filled.badge-emerald {
+        --ax-badge-text: var(--text-color-onemerald);
+        --ax-badge-bg: var(--background-color-emerald);
+        --ax-badge-border: var(--border-color-emerald);
+    }
+
+    .badge-filled.badge-teal {
+        --ax-badge-text: var(--text-color-onteal);
+        --ax-badge-bg: var(--background-color-teal);
+        --ax-badge-border: var(--border-color-teal);
+    }
+
+    .badge-filled.badge-cyan {
+        --ax-badge-text: var(--text-color-oncyan);
+        --ax-badge-bg: var(--background-color-cyan);
+        --ax-badge-border: var(--border-color-cyan);
+    }
+
+    .badge-filled.badge-sky {
+        --ax-badge-text: var(--text-color-onsky);
+        --ax-badge-bg: var(--background-color-sky);
+        --ax-badge-border: var(--border-color-sky);
+    }
+
+    .badge-filled.badge-blue {
+        --ax-badge-text: var(--text-color-onblue);
+        --ax-badge-bg: var(--background-color-blue);
+        --ax-badge-border: var(--border-color-blue);
+    }
+
+    .badge-filled.badge-indigo {
+        --ax-badge-text: var(--text-color-onindigo);
+        --ax-badge-bg: var(--background-color-indigo);
+        --ax-badge-border: var(--border-color-indigo);
+    }
+
+    .badge-filled.badge-violet {
+        --ax-badge-text: var(--text-color-onviolet);
+        --ax-badge-bg: var(--background-color-violet);
+        --ax-badge-border: var(--border-color-violet);
+    }
+
+    .badge-filled.badge-purple {
+        --ax-badge-text: var(--text-color-onpurple);
+        --ax-badge-bg: var(--background-color-purple);
+        --ax-badge-border: var(--border-color-purple);
+    }
+
+    .badge-filled.badge-fuchsia {
+        --ax-badge-text: var(--text-color-onfuchsia);
+        --ax-badge-bg: var(--background-color-fuchsia);
+        --ax-badge-border: var(--border-color-fuchsia);
+    }
+
+    .badge-filled.badge-rose {
+        --ax-badge-text: var(--text-color-onrose);
+        --ax-badge-bg: var(--background-color-rose);
+        --ax-badge-border: var(--border-color-rose);
+    }
+
+    .badge-filled.badge-pink {
+        --ax-badge-text: var(--text-color-onpink);
+        --ax-badge-bg: var(--background-color-pink);
+        --ax-badge-border: var(--border-color-pink);
+    }
 
     /* outline */
 

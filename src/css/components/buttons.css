@@ -251,4 +251,15 @@
         align-items: center;
         gap: var(--ax-button-group-gap);
     }
+
+    .btn:has(> .counter) {
+        position: relative;
+    }
+
+    .btn > .counter {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+    }
 }

@@ -37,16 +37,19 @@
         border-top: var(--ax-table-border-width) solid var(--ax-table-border-color);
     }
 
+    .table thead {
+        color: var(--ax-table-header-text);
+        font-weight: var(--ax-table-header-font-weight);
+        background-color: var(--ax-table-header-bg);
+    }
+
     .table thead th {
         text-align: left;
         padding: var(--ax-table-padding-y) var(--ax-table-padding-x);
-        font-weight: var(--ax-table-header-font-weight);
-        color: var(--ax-table-header-text);
-        background: var(--ax-table-header-bg);
     }
 
     .table thead th.table-sort:hover {
-        background: var(--ax-table-header-bg-hover);
+        background-color: var(--ax-table-header-bg-hover);
     }
 
     .table tbody td {

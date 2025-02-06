@@ -4,8 +4,23 @@
         --ax-counter-bg: var(--background-color-mono);
         --ax-counter-border: var(--border-color-mono-subtle);
         --ax-counter-padding: calc(var(--spacing) * 2);
-        --ax-counter-line-height: calc(var(--spacing) * 4);
         --ax-counter-size: calc(var(--spacing) * 6);
+        --ax-counter-font-size: var(--text-sm);
+        --ax-counter-line-height: calc(var(--spacing) * 4);
+
+        --ax-counter-sm-size: calc(var(--spacing) * 4);
+        --ax-counter-sm-font-size: var(--text-xs);
+        --ax-counter-sm-line-height: calc(var(--spacing) * 3);
+        --ax-counter-sm-padding: calc(var(--spacing) * 2);
+
+        --ax-counter-lg-size: calc(var(--spacing) * 8);
+        --ax-counter-lg-font-size: var(--text-lg);
+        --ax-counter-lg-line-height: calc(var(--spacing) * 6);
+        --ax-counter-lg-padding: calc(var(--spacing) * 3);
+
+        --ax-counter-border: var(--border-color-red);
+        --ax-counter-bg: var(--background-color-red);
+        --ax-counter-text: var(--text-color-onred);
     }
 }
 
@@ -18,6 +33,7 @@
         border-radius: 99999px;
         color: var(--ax-counter-text);
         padding: var(--ax-counter-padding);
+        font-size: var(--ax-counter-font-size);
         line-height: var(--ax-counter-line-height);
         background: var(--ax-counter-bg);
         height: var(--ax-counter-size);
@@ -27,17 +43,24 @@
 
     /* sizes */
 
+    .counter-sm {
+        --ax-counter-padding: var(--ax-counter-sm-padding);
+        --ax-counter-size: var(--ax-counter-sm-size);
+        --ax-counter-font-size: var(--ax-counter-sm-font-size);
+        --ax-counter-line-height: var(--ax-counter-sm-line-height);
+    }
+
     .counter-lg {
-        --ax-counter-padding: calc(var(--spacing) * 3);
-        --ax-counter-size: calc(var(--spacing) * 8);
+        --ax-counter-padding: var(--ax-counter-lg-padding);
+        --ax-counter-size: var(--ax-counter-lg-size);
+        --ax-counter-font-size: var(--ax-counter-lg-font-size);
+        --ax-counter-line-height: var(--ax-counter-lg-line-height);
     }
 
     /* filled */
 
     .counter-red {
-        --ax-counter-border: var(--border-color-red);
-        --ax-counter-bg: var(--background-color-red);
-        --ax-counter-text: var(--text-color-onred);
+
     }
 
     .counter-orange {
