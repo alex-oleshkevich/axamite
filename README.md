@@ -11,7 +11,7 @@ So I created that library.
 
 ## Vision
 
-This library is built upon these concepts:  
+This library is built upon these concepts:
 
 - **use modern CSS**: no ugly cssinjs or any other brain fuck
 - **use web components**: use Custom Elements for complex components. They are can be used with good old HTML as well as with Vue/React.
